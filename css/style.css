@@ -658,7 +658,7 @@ h1.table-detail{
 }
 
 /* ==========================周邊景點========================== */
-.good-food{
+.good-food, .war-view, .good-view{
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
