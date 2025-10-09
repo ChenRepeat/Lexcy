@@ -498,6 +498,7 @@ i{
 /* ==========================雷斯故事========================== */
 .name-intro{
   text-align: center;
+  margin-bottom: 60px;
 }
 .build-intro-inner{
   display: flex;
@@ -538,4 +539,11 @@ i{
   flex-direction: column;
   justify-content: center;
   gap: 10%;
+}
+.table-detail{
+  height: 2rem;
+  margin-right: 1rem;
+}
+h1.table-detail{
+  text-align: right;
 }
