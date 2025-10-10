@@ -116,6 +116,10 @@ i{
   width: 5rem;
   text-decoration: none;
   padding: 10px;
+  color: var(--color-sub-dark);
+}
+.sky-link.font-org-light{
+  color: var(--color-org-light);
 }
 .toolbar .sky-link:hover{
   background-color: var(--color-org);
@@ -145,6 +149,7 @@ i{
   bottom: 0;
   width: 100%;
 }
+
 .linkicon{
   display: flex;
   gap: 16px;
@@ -153,8 +158,8 @@ i{
   justify-content: center;
 }
 .linkicon a{
-  color: var(--color-org);
   height: 50px;
+  color: var(--color-sub-dark);
 }
 
 .footinfo{
@@ -419,11 +424,25 @@ i{
   gap: 60px;
   text-align: center;
 }
+.news-flex > li > a > h2, .news-flex > li > a > img{
+  margin-bottom: 20px;
+}
 
 .news-flex > li > a{
   text-decoration: none;
   color: var(--color-org);
 }
+.news-flex > li > a > img{
+  transition:1s;
+  transform: translate(0, 0);
+  box-shadow: 0px 0px 0px var(--color-sub-dark); 
+}
+.news-flex > li > a:hover > img{
+  transition:1s;
+  transform: translate(-4px,-4px);
+  box-shadow: 10px 10px 5px var(--color-sub-dark); 
+}
+
 
 /* ==========================新聞頁細節========================== */
 .news-detail{
@@ -435,6 +454,7 @@ i{
 }
 .news-detail img{
   border-radius: 16px;
+  width: 100%;
 }
 .detail-inner{
   display: flex;
@@ -458,6 +478,7 @@ i{
   background-position: center 640px;
   padding-left: 10%;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .toolbar .room-info-title{
@@ -466,6 +487,7 @@ i{
   margin: 2rem;
   text-align-last: left;
 }
+
 
 .room-pic{
   width: 1200px;
@@ -563,7 +585,17 @@ i{
 }
 
 /* ==========================訂房========================== */
-
+.headpic-book{
+  justify-content: center;
+  background-image: url('../img/room-6.jpg');
+  width: 100%;
+  background-position: center 55%;
+}
+.room-book-title{
+  width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
 .room-booking{
   display: flex;
   margin: 60px auto;
@@ -579,13 +611,19 @@ i{
   gap: 10%;
   justify-content: center;
 }
+.roompic-booking{
+  width: 360px;
+  height: 360px;
+  border-radius: 2rem;
+}
 .booking-detail > li{
   display: flex;
   text-align: right;
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0.2rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .label ~ i ,.date-label ~ i{
@@ -596,13 +634,32 @@ i{
 }
 .label,.date-label, .info-detail > div{
   width: 72%;
+  text-align: right;
   box-sizing: border-box;
-  padding-right: 2.5%;
+  padding-right: 10%;
+  border-top: 0;
+  border-left: 0;
   border-bottom: 3px solid var(--color-sub-dark);
   border-right: 1px solid var(--color-sub-dark);
 }
 .date-label{
   width: 36%;
+}
+.label{
+  background-color: var(--color-sub-light);
+  appearance: none;
+  text-align: center;
+}
+.label > option{
+  padding-right: 8%;
+}
+.arrow{
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 3;
 }
 /* ==========================訂房確認========================== */
 .booking-confirm{
@@ -660,7 +717,14 @@ p.warning{
 .headpic-story{
   background-image: url("../img/headpic-story.jpg");
   background-size: 100% auto;
-  background-position: center 58%;
+  background-position: center 62%;
+}
+.title-story{
+  text-align: center;
+  display: block;
+  align-self:flex-end;
+  margin-bottom: 20px;
+
 }
 .name-intro{
   text-align: center;
@@ -689,11 +753,15 @@ p.warning{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 10%;
   margin-bottom: 60px;
 }
 .west-intro > img{
+  width: 45%;
   border-radius: 1rem;
+}
+.west-intro-word{
+  width: 45%;
 }
 .located-detail{
   display: flex;
@@ -721,7 +789,9 @@ p.warning{
 h1.table-detail{
   text-align: right;
 }
-
+.hidden {
+      display: none;
+}
 /* ==========================周邊景點========================== */
 .good-food, .war-view, .good-view{
   margin: 2rem auto;

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/img/logo-icon.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
   <title>雷斯故事</title>
 </head>
@@ -19,20 +20,20 @@
       <li><i class="fa-solid fa-bars hamberger-btn font-org-light"></i></li>
     </ul>
     <div class="title title-story">
-      <h1 class="font-xxl story-title">關於雷斯西</h1>
-      <h2 class="font-xl">每個名字的背後，都有一段故事...</h2>
+      <h1 class="font-xl story-title font-sub-light">關於雷斯西</h1>
+      <h2 class="font-m font-sub-light">每個名字的背後，都有一段故事...</h2>
     </div>
   </header>
   <main class="wrapper">
     <ul class="tag-list">
-      <li class="tag-1"><a href="#" class="-on font-l">關於雷斯西</a></li>
+      <li class="tag-1"><a href="#" class="-on font-l">雷斯故事</a></li>
       <li class="tag-2"><a href="#" class="font-l">使用工法</a></li>
       <li class="tag-3"><a href="#" class="font-l">關於西方</a></li>
     </ul>
-    <section class="name-intro">
-      <p class="font-m font-darkh">雷斯是烈嶼台語的念法直接變成中文，<br>西是因為位在島嶼的西口村西方這個聚落。<br><br>且英文唸起來很像Let' s see，<br>即為「讓我想想」的俗諺。來這個地方遠離塵囂，<br>給你一個安靜的空間放空或想想跟自己有關的事情，<br>不管是決定未來或是懷念過去。<br><br>但村里緩慢的生活步調、隨處可見的牛、傍晚的蟲鳴鳥叫、<br>稀疏的海浪聲跟依循古法的閩式建築，可能更容易讓你懷念過去。</p>
+    <section class="name-intro tab-content">
+      <p class="font-m font-dark">雷斯是烈嶼台語的念法直接變成中文，<br>西是因為位在島嶼的西口村西方這個聚落。<br><br>且英文唸起來很像Let' s see，<br>即為「讓我想想」的俗諺。來這個地方遠離塵囂，<br>給你一個安靜的空間放空或想想跟自己有關的事情，<br>不管是決定未來或是懷念過去。<br><br>但村里緩慢的生活步調、隨處可見的牛、傍晚的蟲鳴鳥叫、<br>稀疏的海浪聲跟依循古法的閩式建築，可能更容易讓你懷念過去。</p>
     </section>
-    <section class="build-intro">
+    <section class="build-intro tab-content">
       <div class="build-intro-inner">
         <img src="img/buiding-intro1.png" alt="">
         <div class="build-intro-word">
@@ -55,7 +56,7 @@
         </div>
       </div>
     </section>
-    <section class="west-intro">
+    <section class="west-intro tab-content">
       <img src="https://picsum.photos/500/500" alt="">
       <div class="west-intro-word font-dark">
         <p class="font-m font-org">西方是金門烈嶼的歷史街區，曾因撤軍而衰退，但近年來，隨著年輕人投入造街活動，老街逐漸恢復人氣。當地商店如炸雞店、冰店、茶飲店等吸引遊客，金門縣政府也在街道上增添軍事裝飾，重現當年金門十萬大軍的熱鬧場景。街道兩側的軍事標語、戰地紀念與軍事遺跡，讓遊客更了解當年的戰地生活，並成為熱門的打卡地點。
@@ -107,5 +108,21 @@
       <li><a href="manners&rules1.html" class="land-link font-s">規則及條款</a></li>
     </ul>
   </footer>
+  <script>
+    const tabs = document.querySelectorAll('.tag-list a');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', (event) => {
+        event.preventDefault();
+        tabs.forEach(t => t.classList.remove('-on'));
+        tab.classList.add('-on');
+        contents.forEach(c => c.classList.add('hidden'));
+        contents[index].classList.remove('hidden');
+      });
+    });
+    tabs[0].classList.add('-on');
+    contents.forEach(c => c.classList.add('hidden'));
+    contents[0].classList.remove('hidden');
+  </script>
 </body>
 </html>

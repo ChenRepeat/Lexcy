@@ -3,36 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>房型介紹</title>
+  <title>預約</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/img/logo-icon.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
   <script async src="//www.instagram.com/embed.js"></script>
 </head>
 <body>
   <a href="index.html" class="logo-link"><img src='img/logo.png' alt="" class="logo"></a>
-  <header class="toolbar">
+  <header class="toolbar headpic-book">
     <ul class="pagesbtn">
-      <li><a href="news.html" class="font-s sky-link">最新消息</a></li>
-      <li><a href="story.html" class="font-s sky-link">雷斯故事</a></li>
-      <li><a href="room-info.html" class="font-s sky-link">房型介紹</a></li>
-      <li><a href="tourism.html" class="font-s sky-link">周邊景點</a></li>
-      <li><a href="#" class="font-s sky-link">訂單查詢</a></li>
+      <li><a href="news.html" class="font-s sky-link font-org-light">最新消息</a></li>
+      <li><a href="story.html" class="font-s sky-link font-org-light">雷斯故事</a></li>
+      <li><a href="room-info.html" class="font-s sky-link font-org-light">房型介紹</a></li>
+      <li><a href="tourism.html" class="font-s sky-link font-org-light">周邊景點</a></li>
+      <li><a href="#" class="font-s sky-link font-org-light">訂單查詢</a></li>
       <li><i class="fa-solid fa-bars hamberger-btn"></i></li>
     </ul>
-    <div class="title tourism-title">
-      <h1 class="font-xxl tourism-title">清居預約</h1>
+    <div class="title room-info-title">
+      <h1 class="font-xxl room-book-title">清居預約</h1>
     </div>
   </header>
   <main class="wrapper">
     <section class="room-booking">
-    <img class="roompic-booking" src="https://picsum.photos/360/360" alt="">
+    <img class="roompic-booking" src="img/room-4.jpg" alt="">
     <ul class="booking-detail">
-        <li><h1 class="font-m">房型</h1><div class="label font-m">觀山廳</div><i class="fa-regular fa-circle-down font-m"></i></li>
-        <li><h1 class="font-m">數量</h1><div class="label font-m">1  </div><i class="fa-regular fa-circle-down font-m"></i></li>
-        <li><h1 class="font-m">日期</h1>
-            <div class="date-label font-m">2025-9-20</div>
-            <div class="date-label font-m">2025-9-20</div>
-            <i class="fa-solid fa-calendar font-m"></i></li>
+        <li>
+          <h1 class="font-m">房型</h1>
+          <select class="label font-dark font-s">
+                <option>觀山廳</option>
+                <option>聽海觀</option>
+                <option>山海居</option>
+          </select>
+          <i class="fa-regular fa-circle-down font-m arrow"></i>
+        </li>
+        <li>
+          <h1 class="font-m">數量</h1>
+          <select class="label font-dark font-s">
+                <option>1 間</option>
+                <option>2 間</option>
+          </select>
+          <i class="fa-regular fa-circle-down font-m arrow"></i>
+        </li>
+        <li>
+          <h1 class="font-m">日期</h1>
+          <i class="fa-solid fa-calendar font-m "></i>
+          <div class="date-label font-s">2025-9-20</div>
+           <div class="date-label font-s">2025-9-20</div>
+            
+        </li>
     </ul>
     </section>
     <ul class="pagechange-btn">
