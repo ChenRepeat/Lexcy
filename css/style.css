@@ -254,7 +254,7 @@ i{
 
 /* ==============================首頁============================== */
 .headpic-index{
-  background-image: url(img/headpic-index.jpg);
+  background-image: url("/img/headpic-index.jpg");
   background-position: center;
   opacity: .9;
 }
@@ -320,7 +320,7 @@ i{
 
 .mid-banner{
   height: 400px;
-  background-image: url(img/headpic-tour.jpg);
+  background-image: url("img/headpic-tour.jpg");
   background-size: 100% 400px;
   justify-content: end;
   padding: 24px 60px;
@@ -371,7 +371,7 @@ i{
 
 /* ==========================新聞頁========================== */
 .headpic-news{
-  background-image: url(img/headpic-news.jpg);
+  background-image: url("img/headpic-news.jpg");
   background-position: center 55%;
 }
 .title-news{
@@ -453,7 +453,7 @@ i{
 
 /* ==========================房型介紹========================== */
 .headpic-room{
-  background-image: url(img/headpic-room.jpg);
+  background-image: url("img/headpic-room.jpg");
   background-size: 100% auto;
   background-position: center 640px;
   padding-left: 10%;
@@ -485,13 +485,13 @@ i{
   background-position: center;
 }
 .room-pic1{
-  background-image: url(img/room-4.jpg);
+  background-image: url("img/room-4.jpg");
 }
 .room-pic2{
-  background-image: url(img/room-6.jpg);
+  background-image: url("img/room-6.jpg");
 }
 .room-pic3{
-  background-image: url(img/room-2.jpg);
+  background-image: url("img/room-2.jpg");
 }
 .room-double{
   display: flex;
@@ -658,7 +658,7 @@ p.warning{
 
 /* ==========================雷斯故事========================== */
 .headpic-story{
-  background-image: url(img/headpic-story.jpg);
+  background-image: url("img/headpic-story.jpg");
   background-size: 100% auto;
   background-position: center 58%;
 }
@@ -735,7 +735,7 @@ h1.table-detail{
   height: 18.75rem;
   text-align: center;
   margin-bottom: 5%;
-  background-image: url(https://picsum.photos/300/300);
+  background-image: url('/img/buiding-intro1.png');
 }
 .tour-card > h1{
   display: block;
