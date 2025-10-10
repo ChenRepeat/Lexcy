@@ -55,7 +55,9 @@ body{
 .font-sub-org{
   color: var(--color-sub-org);
 }
-
+.font-sub-light{
+  color: var(--color-sub-light);
+}
 .btn-link{
   display: block;
   width: 10rem;
@@ -80,7 +82,10 @@ i{
   left: 20px;
   top: 10px;
   z-index: 100;
+  width: 200px;
+
 }
+
 
 .toolbar{
   display: flex;
@@ -88,7 +93,6 @@ i{
   width: 100%;
   top: 0;
   z-index: 10;
-  background-image: url("https://picsum.photos/1440/600");
   background-size: cover;
   position: relative;
 }
@@ -102,6 +106,7 @@ i{
   justify-content: end;
   position: fixed;
   top: 0;
+  right: -4%;
   z-index: 100;
   padding-right: 1.5rem;
   box-sizing: border-box;
@@ -111,7 +116,6 @@ i{
   width: 5rem;
   text-decoration: none;
   padding: 10px;
-  color: var(--color-org);
 }
 .toolbar .sky-link:hover{
   background-color: var(--color-org);
@@ -127,20 +131,17 @@ i{
 .title{
   display: block;
   margin: 60px auto;
-  align-self: center;
-  text-align: center;
 }
 .title > .btn-link{
   margin: 0 auto;
 }
 .main-title{
-  color: var(--color-org);
-  margin: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ==============================地============================== */
 .landbar{
-  position: sticky;
+  /* position: sticky; */
   bottom: 0;
   width: 100%;
 }
@@ -166,6 +167,9 @@ i{
 .land-link{
   color: var(--color-org-light);
   text-decoration: none;
+}
+.logo-sub{
+  width: 50px;
 }
 
 /* ==========================頁簽========================== */
@@ -249,6 +253,15 @@ i{
 }
 
 /* ==============================首頁============================== */
+.headpic-index{
+  background-image: url(/img/headpic-index.jpg);
+  background-position: center;
+  opacity: .9;
+}
+.index-titlebanner{
+  align-self: flex-end;
+  text-align: center;
+}
 .wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -306,8 +319,9 @@ i{
 }
 
 .mid-banner{
-  height: 25rem;
-  background-image: url(https://picsum.photos/1200/400);
+  height: 400px;
+  background-image: url(/img/headpic-tour.jpg);
+  background-size: 100% 400px;
   justify-content: end;
   padding: 24px 60px;
   display: flex;
@@ -316,14 +330,6 @@ i{
   box-sizing: border-box;
 }
 
-.mid-banner h1{
-  color: var(--color-sub-light);
-  text-align: left;
-}
-
-.mid-banner h2{
-  color: var(--color-sub-light);
-}
 
 .index-share{
   margin: 60px auto;
@@ -364,6 +370,20 @@ i{
 }
 
 /* ==========================新聞頁========================== */
+.headpic-news{
+  background-image: url(/img/headpic-news.jpg);
+  background-position: center 55%;
+}
+.title-news{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-self: flex-end;
+  padding-bottom: 60px;
+  margin-left: 8.3333333%;
+  align-items: start;
+  margin-bottom: 0;
+}
 .toolbar .banner-news-title{
   display: flex;
   flex-direction: column;
@@ -388,8 +408,9 @@ i{
   display: block;
   border-bottom: 3px solid var(--color-sub-dark);
   box-sizing: border-box;
-  padding-left: 20px;
+  padding-left: 3.3%;
   line-height: 1.3;
+  padding-bottom: .6%;
 }
 .news-flex{
   display: flex;
@@ -431,6 +452,14 @@ i{
 
 
 /* ==========================房型介紹========================== */
+.headpic-room{
+  background-image: url(/img/headpic-room.jpg);
+  background-size: 100% auto;
+  background-position: center 640px;
+  padding-left: 10%;
+  box-sizing: border-box;
+}
+
 .toolbar .room-info-title{
   align-self: flex-end;
   color: var(--color-org-light);
@@ -451,32 +480,55 @@ i{
 }
 
 .roomlist > li{
-  background-image: url(https://picsum.photos/300/300);
   border-radius: 16px;
+  background-size: cover;
+  background-position: center;
 }
-
+.room-pic1{
+  background-image: url(/img/room-4.jpg);
+}
+.room-pic2{
+  background-image: url(/img/room-6.jpg);
+}
+.room-pic3{
+  background-image: url(/img/room-2.jpg);
+}
 .room-double{
   display: flex;
   justify-content: center;
   gap: 1rem;
-  display: none;
+  /* display: none; */
 }
 .room-double.on{
   display: flex;
 }
+.roompic-double{
+  width: 50%;
+}
 .roompic-double > img{
   border-radius: 2.5rem;
+  width: 100%;
+  height: 600px;
 }
 .roompic-list{
   display: flex;
   gap: calc(120px/3);
   margin-top: 20px;
 }
+.roompic-list > li{
+  width: 20%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
 .roompic-list > li > img{
   display: block;
-  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
   opacity: .5;
 }
+
+
 .room-double.room-info{
   display: flex;
   flex-direction: column;
@@ -605,6 +657,11 @@ p.warning{
 
 
 /* ==========================雷斯故事========================== */
+.headpic-story{
+  background-image: url(/img/headpic-story.jpg);
+  background-size: 100% auto;
+  background-position: center 58%;
+}
 .name-intro{
   text-align: center;
   margin-bottom: 60px;
@@ -620,9 +677,13 @@ p.warning{
 }
 .build-intro-inner > img{
   border-radius: 1rem;
+  width: 25%;
 }
-.build-intro-word > p{
-  color: var(--color-org);
+.build-intro-word-left, .build-intro-word{
+  width: 52.1%;
+}
+.build-intro-word-left > h1{
+  text-align: right;
 }
 .west-intro{
   display: flex;
@@ -641,13 +702,17 @@ p.warning{
   margin-bottom: 60px;
 }
 .googlemap-area{
-  width: 41.6667%;
+  width: 50%;
 }
 .address-detail{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10%;
+  align-items: center;
+  gap: 5%;
+}
+.address-detail > img{
+  width: 75%;
 }
 .table-detail{
   height: 2rem;
