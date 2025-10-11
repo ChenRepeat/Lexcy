@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>預約</title>
+  <title>訂單查詢</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="/img/logo-icon.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
 </head>
 <body>
   <a href="index.html" class="logo-link"><img src='img/logo.png' alt="" class="logo"></a>
-  <header class="toolbar headpic-book">
+  <header class="toolbar headpic-result">
     <ul class="pagesbtn">
       <li><a href="news.html" class="font-s sky-link font-org-light">最新消息</a></li>
       <li><a href="story.html" class="font-s sky-link font-org-light">雷斯故事</a></li>
@@ -21,43 +21,37 @@
       <li><i class="fa-solid fa-bars hamberger-btn"></i></li>
     </ul>
     <div class="title room-info-title">
-      <h1 class="font-xxl room-book-title">清居預約</h1>
+      <h1 class="font-xl font-dark">訂單查詢</h1>
     </div>
   </header>
-  <main class="wrapper">
-    <section class="room-booking">
-    <img class="roompic-booking" src="img/room-4.jpg" alt="">
-    <ul class="booking-detail">
-        <li>
-          <h1 class="font-m">房型</h1>
-          <select class="label font-dark font-s">
-                <option>觀山廳</option>
-                <option>聽海觀</option>
-                <option>山海居</option>
-          </select>
-          <i class="fa-regular fa-circle-down font-m arrow"></i>
-        </li>
-        <li>
-          <h1 class="font-m">數量</h1>
-          <select class="label font-dark font-s">
-                <option>1 間</option>
-                <option>2 間</option>
-          </select>
-          <i class="fa-regular fa-circle-down font-m arrow"></i>
-        </li>
-        <li>
-          <h1 class="font-m">日期</h1>
-          <i class="fa-solid fa-calendar font-m "></i>
-          <div class="date-label font-s">2025-9-20</div>
-           <div class="date-label font-s">2025-9-20</div>
-            
-        </li>
-    </ul>
+  <main class="wrapper book-result">
+    <section class="check-info">
+      <div class="email-info font-s"><h1>電子信箱</h1><input type="text" class="font-s"></div>
+      <div class="date-info font-s"><h1>入住日期</h1><input type="date" class="font-s"></div>
+      <div><a href="#" class="btn-result">查詢</a></div>
     </section>
-    <ul class="pagechange-btn">
+    <div class="result-num"><h1 class="font-l">訂單編號-LE2025092930D1</h1></div>
+    <section class="result-list">
+      <ul class="result-info">
+        <li><h1 class="font-m">房型</h1><div class="font-m">觀山廳</div></li>
+        <li><h1 class="font-m">數量</h1><div class="font-m">1  間</div></li>
+        <li><h1 class="font-m">單價</h1><div class="font-m">NTD.2000元整/晚</div></li>
+        <li><h1 class="font-m">入住日期</h1><div class="font-m">2025-9-20</div></li>
+        <li><h1 class="font-m">退房日期</h1><div class="font-m">2025-9-23</div></li>
+      </ul>
+      <ul class="result-info">
+        <li><h1 class="font-m">姓名</h1><div class="font-m">雷斯西</div></li>
+        <li><h1 class="font-m">手機</h1><div class="font-m">0947-647-647</div></li>
+        <li><h1 class="font-m">信箱</h1><div class="font-m">lexcy@west.tw</div></li>
+        <li><h1 class="font-m">總價</h1><div class="font-m">NTD.6000元整</div></li>
+        <li><h1 class="font-m">已付訂金</h1><div class="font-m">NTD.1200元整</div></li>
+      </ul>
+    </section>
+    <ul class="pagechange-btn btn-book">
       <li class="btn-back"><a href="room-info.html">取消</a></li>
-      <li class="btn-confirm"><a href="room-booking-confirm.html">送出</a></li>
-  </ul>
+      <li class="btn-confirm"><a href="room-booking.html">修改</a></li>
+    </ul>
+
   </main>
   <footer class="landbar">
     <ul class="linkicon">

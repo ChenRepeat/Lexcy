@@ -83,9 +83,7 @@ i{
   top: 10px;
   z-index: 100;
   width: 200px;
-
 }
-
 
 .toolbar{
   display: flex;
@@ -116,7 +114,8 @@ i{
   width: 5rem;
   text-decoration: none;
   padding: 10px;
-  color: var(--color-sub-dark);
+  color: var(--color-org);
+  font-weight: bold;
 }
 .sky-link.font-org-light{
   color: var(--color-org-light);
@@ -191,20 +190,6 @@ i{
   text-align: center;
   color: var(--color-org-light);
 }
-.tag-1,.tag-2:hover,.tag-3:hover{
-  color: var(--color-sub-dark);
-  border-bottom: 3px solid var(--color-sub-dark);
-}
-.tag-list:has(.tag-2:hover) .tag-1,.tag-list:has(.tag-3:hover) .tag-1{
-  border: 0;
-  color: var(--color-org-light);
-}
-.tag-list > .tag-1:hover ~ .tab-list >.tab-2,.tag-list > .tag-1:hover ~ .tab-list >.tab-3,
-.tag-list > .tag-2:hover ~ .tab-list >.tab-1,.tag-list > .tag-2:hover ~ .tab-list >.tab-3,
-.tag-list > .tag-3:hover ~ .tab-list >.tab-1,.tag-list > .tag-3:hover ~ .tab-list >.tab-2{  
-  display: none;
-}
-
 
 /* ==============================按鈕們============================== */
 
@@ -220,7 +205,7 @@ i{
   gap: 5%;
 }
 
-.pagechange-btn > li > a, .guest-info > .btn-confirm{
+.pagechange-btn > li > a, .guest-info > .btn-confirm, .btn-result{
   display: block;
   width: 152px;
   font-size: 28px;
@@ -352,32 +337,33 @@ i{
 .headpic-rules{
   background-image: url("../img/headpic-rules.jpg");
   background-position: center 35%;
+  align-items: center
 }
 .page-rules{
   width: 1200px;
 }
-.tab-1{
+.page-rules .tab-1{
   /* width: 1200px; */
   list-style: disc;
   margin: 0 auto;
 }
-.tab-2{
+.page-rules .tab-2{
   display: none;
 }
 
-.tab-2 li{
+.page-rules .tab-2 li{
   margin-bottom: 60px;
 }
-.tab-2 li h2{
+.page-rules .tab-2 li h2{
   margin-bottom: 8px;
 }
-.tab-2 p{
+.page-rules .tab-2 p{
   width: 100%;
   padding: 0 60px;
   box-sizing: border-box;
   color: var(--color-org-light);
 }
-.tab-3{
+.page-rules .tab-3{
   padding: 0px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
@@ -492,7 +478,6 @@ i{
   background-position: center 640px;
   padding-left: 10%;
   box-sizing: border-box;
-  justify-content: center;
 }
 
 .toolbar .room-info-title{
@@ -608,7 +593,9 @@ i{
 .room-book-title{
   width: 1200px;
   display: block;
-  margin: 0 auto;
+  margin: 2rem auto;
+  box-sizing: border-box;
+  padding-left: 2rem;
 }
 .room-booking{
   display: flex;
@@ -723,10 +710,79 @@ i{
 p.warning{
   display: block;
   position: absolute;
-  top: 96px;
+  top: 104px;
+}
+input{
+  width: 72%;
+  background-color: var(--color-sub-light);
+  padding-right: 10%;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 3px solid var(--color-sub-dark);
+  border-right: 1px solid var(--color-sub-dark);
+}
+/* ==========================預定完成========================== */
+.headpic-result{
+  height: 300px;
+  justify-content: center;
 }
 
 
+.book-result{
+  border-top:2px solid var(--color-sub-dark);
+}
+.result-list{
+  display: flex;
+  margin: 60px auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+}
+.result-info{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  gap: 5%;
+  justify-content: center;
+}
+.result-info > li{
+  display: flex;
+  text-align: right;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+/* ==========================訂單查詢========================== */
+.check-info{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.check-info > div{
+  display: flex;
+  width: 32%;
+  margin-top: 3rem;
+}
+.check-info  h1{
+  margin-right: 20px;
+}
+.check-info input{
+  padding-right: 0;
+}
+.btn-result{
+  margin: 0 auto;
+}
+.result-num{
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  border-bottom: 1px solid var(--color-sub-dark);
+}
 /* ==========================雷斯故事========================== */
 .headpic-story{
   background-image: url("../img/headpic-story.jpg");
@@ -738,11 +794,20 @@ p.warning{
   display: block;
   align-self:flex-end;
   margin-bottom: 20px;
-
+}
+.story-tab{
+  margin-top: 2rem;
+}
+.story-list{
+  width: 1200px;
 }
 .name-intro{
+  width: 1200px;
   text-align: center;
   margin-bottom: 60px;
+}
+.build-intro{
+  display: none;
 }
 .build-intro-inner{
   display: flex;
@@ -764,7 +829,7 @@ p.warning{
   text-align: right;
 }
 .west-intro{
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 10%;
@@ -803,10 +868,49 @@ p.warning{
 h1.table-detail{
   text-align: right;
 }
-.hidden {
-      display: none;
+.story-page .tag-2:hover ~ .story-tab .tab-2{
+  display: block;
 }
+.story-page .tag-3:hover ~ .story-tab .tab-3{
+  display: flex;
+}
+
 /* ==========================周邊景點========================== */
+.headpic-tour{
+  background-image: url("../img/headpic-tour.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+.tourism-title{
+  align-self: flex-end;
+  text-align: center;
+}
+.tour-title{
+  margin-bottom: 40px;
+}
+.tour-title ~ h2{
+  font-weight: normal;
+}
+
+.foodpic-1{background-image: url("../img/foodpic-1.png");}
+.foodpic-2{background-image: url("../img/foodpic-2.png");}
+.foodpic-3{background-image: url("../img/foodpic-3.png");}
+.foodpic-4{background-image: url("../img/foodpic-4.png");}
+.foodpic-5{background-image: url("../img/foodpic-5.png");}
+.foodpic-6{background-image: url("../img/foodpic-6.png");}
+.warpic-1{background-image: url("../img/warview-1.png");}
+.warpic-2{background-image: url("../img/warview-2.png");}
+.warpic-3{background-image: url("../img/warview-3.png");}
+.warpic-4{background-image: url("../img/warview-4.png");}
+.warpic-5{background-image: url("../img/warview-5.png");}
+.warpic-6{background-image: url("../img/warview-6.png");}
+.goodpic-1{background-image: url("../img/goodview-1.png");}
+.goodpic-2{background-image: url("../img/goodview-2.png");}
+.goodpic-3{background-image: url("../img/goodview-3.png");}
+.goodpic-4{background-image: url("../img/goodview-4.png");}
+.goodpic-5{background-image: url("../img/goodview-5.png");}
+.goodpic-6{background-image: url("../img/goodview-6.png");}
+
 .good-food, .war-view, .good-view{
   margin: 2rem auto;
   display: flex;
@@ -819,19 +923,29 @@ h1.table-detail{
   height: 18.75rem;
   text-align: center;
   margin-bottom: 5%;
-  background-image: url("../img/buiding-intro1.png");
+  border-radius: 1rem;
 }
-.tour-card > h1{
+.tour-card a{
+  text-decoration: none;
+}
+.tour-card  h1{
   display: block;
   height: 100%;
   padding: 45% 0;
   box-sizing: border-box;
   opacity: 0;
 }
-.tour-card > h1:hover{
-  transition:all 1s;
+.tour-card  h1:hover{
+  transition:1s ;
   opacity: 1;
-  background-color:rgba(209, 149, 102, .5);
+  background-color:rgba(209, 149, 102, .7);
+  border-radius: 1rem;
+}
+.tag-list .war-view, .tag-list .good-view{
+  display: none;
+}
+.tour-list .tag-2:hover ~ .tour-page .tab-2,.tour-list  .tag-3:hover ~ .tour-page .tab-3{
+  display: flex;
 }
 /* ==========================周邊景點-細節========================== */
 .tour-intro{
@@ -855,4 +969,20 @@ h1.table-detail{
 }
 .tour-googlemap-srea{
   width: 100%;
+}
+
+/* ==========================頁籤:hover========================== */
+
+.tag-1,.tag-2:hover,.tag-3:hover{
+  color: var(--color-sub-dark);
+  border-bottom: 3px solid var(--color-sub-dark);
+}
+.tag-list:has(.tag-2:hover) .tag-1,.tag-list:has(.tag-3:hover) .tag-1{
+  border: 0;
+  color: var(--color-org-light);
+}
+.tag-list > .tag-1:hover ~ .tab-list >.tab-2,.tag-list > .tag-1:hover ~ .tab-list >.tab-3,
+.tag-list > .tag-2:hover ~ .tab-list >.tab-1,.tag-list > .tag-2:hover ~ .tab-list >.tab-3,
+.tag-list > .tag-3:hover ~ .tab-list >.tab-1,.tag-list > .tag-3:hover ~ .tab-list >.tab-2{  
+  display: none;
 }
