@@ -183,25 +183,29 @@ i{
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
-.tag-list li{
+.tag-1,.tag-2,.tag-3{
   width: 150px;
-  margin: 60px 20px 20px 20px;
+  margin: 60px 0px 20px;
   text-align: center;
-  font-size: 20px;
+  color: var(--color-org-light);
+}
+.tag-1,.tag-2:hover,.tag-3:hover{
+  color: var(--color-sub-dark);
+  border-bottom: 3px solid var(--color-sub-dark);
+}
+.tag-list:has(.tag-2:hover) .tag-1,.tag-list:has(.tag-3:hover) .tag-1{
+  border: 0;
+  color: var(--color-org-light);
+}
+.tag-list > .tag-1:hover ~ .tab-list >.tab-2,.tag-list > .tag-1:hover ~ .tab-list >.tab-3,
+.tag-list > .tag-2:hover ~ .tab-list >.tab-1,.tag-list > .tag-2:hover ~ .tab-list >.tab-3,
+.tag-list > .tag-3:hover ~ .tab-list >.tab-1,.tag-list > .tag-3:hover ~ .tab-list >.tab-2{  
+  display: none;
 }
 
-.tag-1 > a,.tag-2 > a, .tag-3 > a{
-  color: var(--color-org-light);
-  text-decoration: none;
-}
-.tag-1 .-on,.tag-2 .-on ,.tag-3 .-on{
-  display: block;
-  border-bottom: 2px solid var(--color-sub-dark);
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--color-sub-dark);
-}
+
 /* ==============================按鈕們============================== */
 
 .pagechange-btn .btn-back > a{
@@ -345,33 +349,43 @@ i{
 
 /* ==============================聲明頁============================== */
 
-.manners-inner{
+.headpic-rules{
+  background-image: url("../img/headpic-rules.jpg");
+  background-position: center 35%;
+}
+.page-rules{
+  width: 1200px;
+}
+.tab-1{
+  /* width: 1200px; */
   list-style: disc;
+  margin: 0 auto;
+}
+.tab-2{
+  display: none;
 }
 
-.rules-inner li{
+.tab-2 li{
   margin-bottom: 60px;
 }
-.rules-inner li h2{
+.tab-2 li h2{
   margin-bottom: 8px;
 }
-.rules-inner p{
+.tab-2 p{
   width: 100%;
   padding: 0 60px;
   box-sizing: border-box;
   color: var(--color-org-light);
 }
-.price-inner{
-  padding: 60px 120px 60px 120px;
-
-}
-.rules-outside ul{
+.tab-3{
+  padding: 0px 120px 60px 120px;
+  width: 100%;
+  box-sizing: border-box;
   display: none;
 }
-.rules-outside > .on{
+
+.tag-2:hover ~ .page-rules .tab-2,.tag-3:hover ~ .page-rules .tab-3{
   display: block;
-  width: 75%;
-  margin: 0 auto;
 }
 
 /* ==========================新聞頁========================== */
