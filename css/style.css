@@ -63,7 +63,7 @@ body{
   width: 10rem;
   line-height: 3rem;
   text-align: center;
-  background-color: var(--color-sub-dark);
+  background-color: var(--color-org);
   color: var(--color-sub-light);
   border-radius: 1rem ;
 }
@@ -283,6 +283,18 @@ a{
 
 .btn-book{
   align-self: center;
+}
+.btn-act{
+  box-shadow: 3px 3px 3px 1px var(--color-sub-dark) ;
+}
+.btn-act:hover{
+  box-shadow: inset 3px 3px 3px 1px var(--color-sub-dark) ;
+}
+.btn-act-light{
+  box-shadow: 3px 3px 3px 1px var(--color-org) ;
+}
+.btn-act-light:hover{
+  box-shadow: inset 3px 3px 3px 1px var(--color-org) ;
 }
 
 /* ==============================首頁============================== */
