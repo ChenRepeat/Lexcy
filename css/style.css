@@ -11,7 +11,7 @@
 
 body{
   background-color: var(--color-sub-light);
-  font-family: '思源宋體', Arial, sans-serif;
+  font-family: '思源宋體', 'Noto Sans TC',Arial, sans-serif;
 }
 .font-xxl{
   font-size: 60px;
