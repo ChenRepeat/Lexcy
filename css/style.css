@@ -63,7 +63,6 @@ body{
   width: 10rem;
   line-height: 3rem;
   text-align: center;
-  text-decoration: none;
   background-color: var(--color-sub-dark);
   color: var(--color-sub-light);
   border-radius: 1rem ;
@@ -73,6 +72,9 @@ i{
   display: block;
   font-size: 50px;
   line-height: 1.2;
+}
+a{
+  text-decoration: none;
 }
 
 
@@ -112,19 +114,15 @@ i{
 .sky-link{
   display: block;
   width: 5rem;
-  text-decoration: none;
   padding: 10px;
   color: var(--color-org);
   font-weight: bold;
+  position: relative;
 }
 .sky-link.font-org-light{
   color: var(--color-org-light);
 }
-.toolbar .sky-link:hover{
-  background-color: var(--color-org);
-  color: var(--color-org-light);
-  
-}
+
 .toolbar i{
   position: fixed;
   display: none;
@@ -170,12 +168,57 @@ i{
 }
 .land-link{
   color: var(--color-org-light);
-  text-decoration: none;
 }
 .logo-sub{
   width: 50px;
 }
-
+/* ==========================天地hover動畫========================== */
+.footinfo a{
+  position: relative;
+}
+.footinfo a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-org-light);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.sky-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-org);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.sky-link.font-org-light::after{
+  background-color: var(--color-org-light);
+}
+.footinfo a:hover::after,.sky-link:hover::after{
+  transform: scaleX(1);
+}
+.linkicon .fa-line{
+  transform: scale(.9);
+}
+.linkicon li:hover{
+  transition: all .5s;
+  transform: scale(1.2);
+  translate: -4px -4px;
+}
+.linkicon li:hover img{
+  content: url(../img/icon-logo-trans.png);
+}
+.linkicon li:hover a{
+  color: var(--color-org-light);
+  text-shadow: 5px 5px 2px var(--color-sub-dark);
+}
 /* ==========================頁簽========================== */
 
 .tag-list{
@@ -209,7 +252,6 @@ i{
   display: block;
   width: 152px;
   padding: 8px 20px;
-  text-decoration: none;
   background-color: var(--color-org);
   border-radius: 16px;
   color: var(--color-sub-light);
@@ -217,26 +259,23 @@ i{
   box-sizing: border-box;
 }
 .room-btn{
-  line-height: 1.6;
-  color: var(--color-sub-dark);
   list-style: none;
-  text-decoration:none;
   display: block;
   width: 300px;
   height: 300px;
   box-sizing: border-box;
-  padding: 50% 0;
+  padding: 45% 0;
   text-align: center;
-  background-color: var(--color-sub-light);
-  opacity: 0;
   border-radius: 16px;
+  opacity: 0;
 }
 
 .room-btn:hover{
   transition: all .5s;
-  opacity: .8;
+  background-color: rgba(223, 184, 146,.6);
   outline: 1px solid var(--color-sub-dark);
   outline-offset: -10px;
+  opacity: 1;
 }
 
 .btn-book{
@@ -467,7 +506,6 @@ i{
 }
 
 .news-flex > li > a{
-  text-decoration: none;
   color: var(--color-org);
 }
 .news-flex > li > a > img{
@@ -933,9 +971,7 @@ h1.table-detail{
   align-self: flex-end;
   text-align: center;
 }
-.tour-title{
-  margin-bottom: 40px;
-}
+
 .tour-title ~ h2{
   font-weight: normal;
 }
@@ -973,9 +1009,7 @@ h1.table-detail{
   margin-bottom: 5%;
   border-radius: 1rem;
 }
-.tour-card a{
-  text-decoration: none;
-}
+
 .tour-card  h1{
   display: block;
   height: 100%;
@@ -986,7 +1020,7 @@ h1.table-detail{
 .tour-card  h1:hover{
   transition:1s ;
   opacity: 1;
-  background-color:rgba(209, 149, 102, .7);
+  background-color: rgba(223, 184, 146,.6);
   border-radius: 1rem;
   outline: thick double var(--color-sub-dark);
   outline-offset: -1rem;
