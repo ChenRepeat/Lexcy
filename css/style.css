@@ -92,7 +92,7 @@ a{
   height: 37.5rem;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 50;
   background-size: cover;
   position: relative;
 }
@@ -106,7 +106,7 @@ a{
   justify-content: end;
   position: fixed;
   top: 0;
-  right: -4%;
+  right: -60px;
   z-index: 100;
   padding-right: 1.5rem;
   box-sizing: border-box;
@@ -970,11 +970,12 @@ h1.table-detail{
 .tourism-title{
   align-self: flex-end;
   text-align: center;
+  margin-bottom: 3rem;
+}
+.tour-title ~ h2{
+  margin-top: 5%;
 }
 
-.tour-title ~ h2{
-  font-weight: normal;
-}
 
 .foodpic-1{background-image: url("../img/foodpic-1.png");}
 .foodpic-2{background-image: url("../img/foodpic-2.png");}
