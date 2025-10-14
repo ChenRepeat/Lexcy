@@ -13,51 +13,18 @@ body{
   background-color: var(--color-sub-light);
   font-family: '思源宋體', 'Noto Sans TC',Arial, sans-serif;
 }
-.font-xxl{
-  font-size: 60px;
-  line-height: 1.2;
-  text-align: center;
-  font-weight: bold;
-}
-.font-xl{
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: bold;
-}
-.font-l{
-  font-size: 28px;
-  line-height: 1.2;
-}
+.font-xxl{font-size: 60px;line-height: 1.2;text-align: center;font-weight: bold;}
+.font-xl{font-size: 32px;line-height: 1.2;font-weight: bold;}
+.font-l{font-size: 28px;line-height: 1.2;}
+.font-m{font-size: 24px;line-height: 1.6;}
+.font-s{font-size: 20px;line-height: 1.6;}
+.font-xs{font-size: 16px;line-height: 1.6;}
+.font-org-light{  color: var(--color-org-light);}
+.font-org{color: var(--color-org);}
+.font-dark{color: var(--color-sub-dark);}
+.font-sub-org{color: var(--color-sub-org);}
+.font-sub-light{color: var(--color-sub-light);}
 
-.font-m{
-  font-size: 24px;
-  line-height: 1.6;
-}
-
-.font-s{
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.font-xs{
-  font-size: 16px;
-  line-height: 1.6;
-}
-.font-org-light{
-  color: var(--color-org-light);
-}
-.font-org{
-  color: var(--color-org);
-}
-.font-dark{
-  color: var(--color-sub-dark);
-}
-.font-sub-org{
-  color: var(--color-sub-org);
-}
-.font-sub-light{
-  color: var(--color-sub-light);
-}
 .btn-link{
   display: block;
   width: 10rem;
@@ -73,9 +40,7 @@ i{
   font-size: 50px;
   line-height: 1.2;
 }
-a{
-  text-decoration: none;
-}
+a{text-decoration: none;}
 
 
 /* ==============================天============================== */
