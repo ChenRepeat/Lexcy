@@ -25,21 +25,10 @@ body{
 .font-sub-org{color: var(--color-sub-org);}
 .font-sub-light{color: var(--color-sub-light);}
 
-.btn-link{
-  display: block;
-  width: 10rem;
-  line-height: 3rem;
-  text-align: center;
-  background-color: var(--color-org);
-  color: var(--color-sub-light);
-  border-radius: 1rem ;
-}
+.wrapper {width: 1200px;margin: 0 auto;}
 
-i{
-  display: block;
-  font-size: 50px;
-  line-height: 1.2;
-}
+i{display: block;font-size: 50px;line-height: 1.2;}
+
 a{text-decoration: none;}
 
 
@@ -54,13 +43,13 @@ a{text-decoration: none;}
 
 .toolbar{
   display: flex;
-  height: 37.5rem;
   width: 100%;
   top: 0;
   z-index: 50;
   background-size: cover;
   position: relative;
 }
+
 
 .toolbar .pagesbtn {
   display: flex;
@@ -72,7 +61,7 @@ a{text-decoration: none;}
   position: fixed;
   top: 0;
   right: -60px;
-  z-index: 100;
+  z-index: 10;
   padding-right: 1.5rem;
   box-sizing: border-box;
 }
@@ -101,10 +90,6 @@ a{text-decoration: none;}
 .title > .btn-link{
   margin: 0 auto;
 }
-.main-title{
-  margin-bottom: 0.5rem;
-}
-
 /* ==============================地============================== */
 .landbar{
   /* position: sticky; */
@@ -203,7 +188,6 @@ a{text-decoration: none;}
 }
 
 /* ==============================按鈕們============================== */
-
 .pagechange-btn .btn-back > a{
   border: 1px solid var(--color-sub-dark);
   background-color: var(--color-sub-light);
@@ -216,7 +200,7 @@ a{text-decoration: none;}
   gap: 5%;
 }
 
-.pagechange-btn > li > a,.btn-confirm, .btn-result{
+.pagechange-btn > li > a,.btn-confirm, .btn-result,.btn-link{
   display: block;
   width: 152px;
   padding: 8px 20px;
@@ -263,19 +247,6 @@ a{text-decoration: none;}
 }
 
 /* ==============================首頁============================== */
-.headpic-index{
-  background-image: url("../img/headpic-index.jpg");
-  background-position: center;
-  opacity: .9;
-}
-.index-titlebanner{
-  align-self: flex-end;
-  text-align: center;
-}
-.wrapper {
-  width: 1200px;
-  margin: 0 auto;
-}
 .index-intro{
   display: grid;
   grid: repeat(6,1fr) / repeat(6,1fr);
