@@ -7,19 +7,39 @@
   --color-sub-org: #DFB892;
   --color-sub-light: #ECD6BC;
   --color-sub-dark: #361B14;
+  color: var(--color-sub-dark);
 }
 
 body{
   background-color: var(--color-sub-light);
   font-family: '思源宋體', 'Noto Sans TC',Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
 }
-.font-xxl{font-size: 60px;line-height: 1.2;text-align: center;font-weight: bold;}
-.font-xl{font-size: 32px;line-height: 1.2;font-weight: bold;}
-.font-l{font-size: 28px;line-height: 1.2;}
-.font-m{font-size: 24px;line-height: 1.6;}
-.font-s{font-size: 20px;line-height: 1.6;}
-.font-xs{font-size: 16px;line-height: 1.6;}
-.font-org-light{  color: var(--color-org-light);}
+h1{font-size: 60px;line-height: 1.2;text-align: center;font-weight: bold;}
+
+h2{font-size: 32px;line-height: 1.2;font-weight: bold;}
+
+h3{font-size: 28px;line-height: 1.2;}
+
+h4{font-size: 24px;line-height: 1.6;}
+
+h5{font-size: 20px;line-height: 1.6;}
+
+span{font-size: 16px; line-height: 1.6;}
+
+p{font-size: 16px;line-height: 1.6;}
+
+a{
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-org-light);
+  font-weight: bold;
+}
+
+.font-org-light{ color: var(--color-org-light);}
 .font-org{color: var(--color-org);}
 .font-dark{color: var(--color-sub-dark);}
 .font-sub-org{color: var(--color-sub-org);}
@@ -28,9 +48,6 @@ body{
 .wrapper {width: 1200px;margin: 0 auto;}
 
 i{display: block;font-size: 50px;line-height: 1.2;}
-
-a{text-decoration: none;}
-
 
 /* ==============================天============================== */
 .logo {
@@ -50,8 +67,7 @@ a{text-decoration: none;}
   position: relative;
 }
 
-
-.toolbar .pagesbtn {
+.toolbar ul{
   display: flex;
   align-items: center;
   height: 100px;
@@ -83,17 +99,12 @@ a{text-decoration: none;}
   top: 20px;
   right: 20px;
 }
-.title{
-  display: block;
-  margin: 60px auto;
-}
-.title > .btn-link{
-  margin: 0 auto;
-}
+
+
 /* ==============================地============================== */
 .landbar{
-  /* position: sticky; */
-  /* bottom: 0; */
+  position: static;
+  bottom: 0;
   width: 100%;
 }
 
@@ -121,6 +132,7 @@ a{text-decoration: none;}
 }
 .land-link{
   color: var(--color-org-light);
+  text-decoration:underline;
 }
 .logo-sub{
   width: 50px;
@@ -172,67 +184,29 @@ a{text-decoration: none;}
   color: var(--color-org-light);
   text-shadow: 5px 5px 2px var(--color-sub-dark);
 }
-/* ==========================頁簽========================== */
-
-.tag-list{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-.tag-1,.tag-2,.tag-3{
-  width: 150px;
-  margin: 60px 0px 20px;
-  text-align: center;
-  color: var(--color-org-light);
-}
-
 /* ==============================按鈕們============================== */
-.pagechange-btn .btn-back > a{
+button{
+  width: 150px;
+  height: 2.5rem;
   border: 1px solid var(--color-sub-dark);
-  background-color: var(--color-sub-light);
-  color: var(--color-sub-dark);
-}
-.pagechange-btn{
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  gap: 5%;
-}
-
-.pagechange-btn > li > a,.btn-confirm, .btn-result,.btn-link{
-  display: block;
-  width: 152px;
-  padding: 8px 20px;
+  border-radius: 0.5rem;
   background-color: var(--color-org);
-  border-radius: 16px;
-  color: var(--color-sub-light);
-  text-align: center;
-  box-sizing: border-box;
+  color: var(--color-org-light);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
-.room-btn{
-  list-style: none;
-  display: block;
-  width: 300px;
-  height: 300px;
-  box-sizing: border-box;
-  padding: 45% 0;
-  text-align: center;
-  border-radius: 16px;
-  opacity: 0;
+button.light{
+  background-color: #ffffff00;
+  color: var(--color-org);
+  font-weight: normal;
 }
-
-.room-btn:hover{
-  transition: all .5s;
-  background-color: rgba(223, 184, 146,.6);
-  outline: 1px solid var(--color-sub-dark);
-  outline-offset: -10px;
-  opacity: 1;
+.btn-list{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.btn-book{
-  align-self: center;
-}
 .btn-act{
   box-shadow: 3px 3px 3px 1px var(--color-sub-dark) ;
 }
@@ -245,7 +219,29 @@ a{text-decoration: none;}
 .btn-act-light:hover{
   box-shadow: inset 3px 3px 3px 1px var(--color-org) ;
 }
-
+/* ==============================頭圖============================== */
+.banner {
+display: block;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 50vh;
+margin-bottom: 60px;
+}
+.banner-pic {
+display: block;
+width: 100%;
+height: auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -70%);
+z-index: -1;
+}
+.banner-nopic{
+  height: 20vh;
+  border-bottom: 5px double var(--color-sub-dark);
+}
 /* ==============================首頁============================== */
 .index-intro{
   display: grid;
@@ -254,20 +250,26 @@ a{text-decoration: none;}
   height: 1200px;
   padding: 50px;
   box-sizing: border-box;
-  gap: 50px;
+  gap: 16px;
+  align-items: center;
+}
+.index-intro > div{
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  
 }
 .intro-word{
   display: block;
   text-align: center;
-  height: 1fr;
   place-content: center;
+  color: var(--color-sub-dark);
 }
 .intro-pic{
   object-fit: cover;
-  display: block;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
 }
 
 .p1 { grid-row: 1 / 4; grid-column: 1 / 3; }
@@ -286,10 +288,12 @@ a{text-decoration: none;}
   grid-row: 1 / 5; grid-column: 1 / 5;
   z-index: 10;
 }
+
 .index-intro:has(.p1:hover) .p2{
   grid-row: 1 / 3; grid-column: 5 / 7;
   z-index: 10;
 }
+
 .index-intro:has(.p1:hover) .p3{
   grid-row: 5 / 3; grid-column: 5 / 7;
   z-index: 10;
@@ -339,20 +343,6 @@ a{text-decoration: none;}
   grid-row: 1 / 4; grid-column: 3 / 5;
   z-index: 10;
 }
-
-.mid-banner{
-  height: 400px;
-  background-image: url("../img/headpic-tour.jpg");
-  background-size: 100% 400px;
-  justify-content: end;
-  padding: 24px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-sizing: border-box;
-}
-
-
 .index-share{
   margin: 60px auto;
   width: 1200px;
@@ -362,46 +352,19 @@ a{text-decoration: none;}
 
 /* ==============================聲明頁============================== */
 
-.headpic-rules{
-  background-image: url("../img/headpic-rules.jpg");
-  background-position: center 35%;
-  align-items: center
+.rules-manner,.rules-privacy,.rules-price{
+  width: 80%;
+  margin: 60px auto;
 }
-.page-rules{
-  width: 1200px;
+.rules-privacy h2{
+  margin-bottom: 1rem;
 }
-.page-rules .tab-1{
-  /* width: 1200px; */
-  list-style: disc;
-  margin: 0 auto;
-}
-.page-rules .tab-2{
-  display: none;
-}
-
-.page-rules .tab-2 li{
-  margin-bottom: 60px;
-}
-.page-rules .tab-2 li h2{
-  margin-bottom: 8px;
-}
-.page-rules .tab-2 p{
-  width: 100%;
-  padding: 0 60px;
-  box-sizing: border-box;
+.rules-privacy h5{
+  margin-bottom: 3rem;
   color: var(--color-org-light);
-}
-.page-rules .tab-3{
-  padding: 0px 120px 60px 120px;
-  width: 100%;
   box-sizing: border-box;
-  display: none;
+  padding-left: 2rem;
 }
-
-.tag-2:hover ~ .page-rules .tab-2,.tag-3:hover ~ .page-rules .tab-3{
-  display: block;
-}
-
 /* ==========================新聞頁========================== */
 .headpic-news{
   background-image: url("../img/headpic-news.jpg");
@@ -417,16 +380,7 @@ a{text-decoration: none;}
   align-items: start;
   margin-bottom: 0;
 }
-.toolbar .banner-news-title{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-self: flex-end;
-  width: 80%;
-}
-.toolbar .banner-news-title h1{
-  color: var(--color-sub-dark);
-}
+
 .news-main{
   display: flex;
   flex-direction: row;
@@ -440,10 +394,8 @@ a{text-decoration: none;}
   width: 100%;
   display: block;
   border-bottom: 3px solid var(--color-sub-dark);
-  box-sizing: border-box;
-  padding-left: 3.3%;
-  line-height: 1.3;
-  padding-bottom: .6%;
+  padding-left: 4%;
+  padding-bottom: 1%;
 }
 .news-flex{
   display: flex;
@@ -489,37 +441,16 @@ a{text-decoration: none;}
   gap: 36px;
   padding: 0 48px;
 }
-.detail-inner > p{
-  text-align: right;
-}
-.detail-inner > h1{
-  font-weight: bold;
-}
-
-
 
 /* ==========================房型介紹========================== */
-.headpic-room{
-  background-image: url("../img/headpic-room.jpg");
-  background-size: 100% auto;
-  background-position: center 640px;
-  padding-left: 10%;
-  box-sizing: border-box;
+.room-main{
+  width: 1200px;
+  margin: 0 auto;
 }
-
-.toolbar .room-info-title{
-  align-self: flex-end;
-  color: var(--color-org-light);
-  margin: 2rem;
-  text-align-last: left;
-}
-
 
 .room-pic{
-  width: 1200px;
-  margin: 60px auto;
-}
-.roomlist{
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,33 +458,66 @@ a{text-decoration: none;}
   margin-bottom: 1.25rem;
 }
 
-.roomlist > li{
+.room-pic-list{
   border-radius: 16px;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
-.room-pic1{
-  background-image: url("../img/room-4.jpg");
+.type-pic > h2{
+  display: block;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  line-height: 300px;
+  z-index: 2;
+  opacity: 0;
+  background-color: rgba(223, 184, 146, .8);
+  transition: opacity 1s;
+  color: var(--color-sub-dark);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
 }
-.room-pic2{
-  background-image: url("../img/room-6.jpg");
+
+.type-pic > h2::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 5px double var(--color-sub-dark);
+  border-radius: 1rem;
+  transition: all 1s;
 }
-.room-pic3{
-  background-image: url("../img/room-2.jpg");
+
+.type-pic > h2:hover{
+  opacity: 1;
 }
-.room-double{
+
+.type-pic > h2:hover::before{
+  top: 1rem;left: 1rem;right: 1rem;bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.room-pic1,.room-pic2,.room-pic3{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.room-info{
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  display: none;
+  gap: 3rem;
 }
-.room-double.on{
-  display: flex;
-}
-.roompic-double{
+
+.roompic{
   width: 50%;
 }
-.roompic-double > img{
+.roompic > img{
   border-radius: 2.5rem;
   width: 100%;
   height: 600px;
@@ -577,7 +541,7 @@ a{text-decoration: none;}
 }
 
 
-.room-double.room-info{
+.room-detail{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -589,24 +553,34 @@ a{text-decoration: none;}
   gap: 60px;
   text-align: left;
   align-items: start;
-  justify-content: center;
-  color: var(--color-sub-dark);
+  color: var(--color-org-light);
+}
+.serve-list >ul> li{
+  width: auto;
+  margin-bottom: 4px;
+}
+.serve-list i{
+  font-size: 20px;
 }
 
 .room-title{
-  text-align: center;
+  text-align: left;
   color: var(--color-sub-dark);
 }
 .room-intro{
-  color: var(--color-org-light);
+  color:var(--color-org);
+  text-align: justify;
+}
+.price{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 .price-new{
-  align-self: center;
   color: red;
 }
 .price-org{
-  align-self: center;
-  opacity: 0.8;
+  opacity: 0.6;
   text-decoration: line-through;
 }
 
@@ -621,18 +595,9 @@ a{text-decoration: none;}
 }
 
 /* ==========================訂房========================== */
-.headpic-book{
-  justify-content: center;
-  background-image: url('../img/room-6.jpg');
-  width: 100%;
-  background-position: center 55%;
-}
 .room-book-title{
-  width: 1200px;
-  display: block;
-  margin: 2rem auto;
-  box-sizing: border-box;
-  padding-left: 2rem;
+  position: absolute;
+  top: 50%;right: 0;bottom: 0;left: 0;
 }
 .room-booking{
   display: flex;
@@ -640,6 +605,9 @@ a{text-decoration: none;}
   justify-content: center;
   align-items: center;
   column-gap: 5%;
+}
+.room-booking i{
+  font-size: 24px;
 }
 .booking-detail{
   width: 40%;
@@ -656,7 +624,6 @@ a{text-decoration: none;}
 }
 .booking-detail > li{
   display: flex;
-  text-align: right;
   gap: 1rem;
   justify-content: space-between;
   padding: 0.2rem;
@@ -674,23 +641,34 @@ a{text-decoration: none;}
   width: 72%;
   text-align: right;
   box-sizing: border-box;
-  padding-right: 10%;
   border-top: 0;
   border-left: 0;
   border-bottom: 3px solid var(--color-sub-dark);
-  border-right: 1px solid var(--color-sub-dark);
+  border-right: 0px;
   border-radius: 8px;
 }
 .date-label{
   width: 36%;
+  text-align: center;
 }
 .label{
   background-color: var(--color-sub-light);
   appearance: none;
   text-align: center;
+  font-size: 20px;
+  color: var(--color-sub-dark);
+  
 }
 .label > option{
   padding-right: 8%;
+  border: 1px solid var(--color-sub-dark);
+  border-radius: 1rem;
+  z-index: 3;
+}
+
+.booking-detail > li > h4 ~ i{
+line-height: 40px;
+cursor: pointer;
 }
 .arrow{
     position: absolute;
@@ -725,38 +703,34 @@ a{text-decoration: none;}
   display: flex;
   flex-wrap: wrap;
   gap: 5% ;
-  justify-content: right;
+  justify-content: space-around;
   margin-bottom: 20px;
+  justify-items: center;
+  position: relative;
 }
 .info-detail{
   width: 45%;
   display: flex;
-  justify-content: space-between;
   gap: 5%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
-.info-detail > h1{
-  width: 16.6667%;
+.info-detail > h4{
+  width: 13%;
   text-align: right;
 }
-.info-check{
-  position: relative;
-  border-bottom: 4px solid var(--color-sub-dark);
-}
-.btn-confirm{
-  margin: 0 auto 20px;
+
+.guest-pin input{
+  width: 40%;  
 }
 
 p.warning{
   display: block;
-  top: 24%;
-  right: 30%;
+  left: 7rem;
+  top: 6rem;
   position: absolute;
 }
-.guest-pin{
-  margin: 40px auto;
-  
-}
+
 input{
   width: 72%;
   background-color: var(--color-sub-light);
@@ -766,6 +740,10 @@ input{
   border-bottom: 3px solid var(--color-sub-dark);
   border-right: 1px solid var(--color-sub-dark);
   border-radius: 8px;
+  font-size: 24px;
+}
+.price-inner{
+  margin-top: 60px;
 }
 /* ==========================預定完成========================== */
 .headpic-result{
@@ -773,10 +751,6 @@ input{
   justify-content: center;
 }
 
-
-.book-result{
-  border-top:2px solid var(--color-sub-dark);
-}
 .result-list{
   display: flex;
   margin: 60px auto;
@@ -809,17 +783,19 @@ input{
 }
 .check-info > div{
   display: flex;
-  width: 32%;
+  width: 40%;
   margin-top: 3rem;
+  gap: 1rem;
 }
-.check-info  h1{
-  margin-right: 20px;
+.check-info > button{
+  margin-top: 3rem;
 }
 .check-info input{
   padding-right: 0;
 }
-.btn-result{
-  margin: 0 auto;
+
+.date-info > input{
+  text-align: center;
 }
 .result-num{
   box-sizing: border-box;
@@ -830,30 +806,13 @@ input{
   border-bottom: 1px solid var(--color-sub-dark);
 }
 /* ==========================雷斯故事========================== */
-.headpic-story{
-  background-image: url("../img/headpic-story.jpg");
-  background-size: 100% auto;
-  background-position: center 62%;
-}
-.title-story{
-  text-align: center;
-  display: block;
-  align-self:flex-end;
-  margin-bottom: 20px;
-}
-.story-tab{
-  margin-top: 2rem;
-}
-.story-list{
-  width: 1200px;
-}
 .name-intro{
   width: 1200px;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 60px auto;
 }
 .build-intro{
-  display: none;
+  margin: 60px auto;
 }
 .build-intro-inner{
   display: flex;
@@ -871,15 +830,19 @@ input{
 .build-intro-word-left, .build-intro-word{
   width: 52.1%;
 }
-.build-intro-word-left > h1{
+.build-intro-word-left h2{
   text-align: right;
 }
+.build-intro-word h5,.build-intro-word-left h5{
+  font-weight: normal;
+  color: var(--color-org);
+}
 .west-intro{
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10%;
-  margin-bottom: 60px;
+  margin: 60px auto;
 }
 .west-intro > img{
   width: 45%;
@@ -911,51 +874,12 @@ input{
   height: 2rem;
   margin-right: 1rem;
 }
-h1.table-detail{
+.table-detail{
   text-align: right;
 }
-.story-page .tag-2:hover ~ .story-tab .tab-2{
-  display: block;
-}
-.story-page .tag-3:hover ~ .story-tab .tab-3{
-  display: flex;
-}
+
 
 /* ==========================周邊景點========================== */
-.headpic-tour{
-  background-image: url("../img/headpic-tour.jpg");
-  background-size: cover;
-  background-position: center bottom;
-}
-.tourism-title{
-  align-self: flex-end;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.tour-title ~ h2{
-  margin-top: 5%;
-}
-
-
-.foodpic-1{background-image: url("../img/foodpic-1.png");}
-.foodpic-2{background-image: url("../img/foodpic-2.png");}
-.foodpic-3{background-image: url("../img/foodpic-3.png");}
-.foodpic-4{background-image: url("../img/foodpic-4.png");}
-.foodpic-5{background-image: url("../img/foodpic-5.png");}
-.foodpic-6{background-image: url("../img/foodpic-6.png");}
-.warpic-1{background-image: url("../img/warview-1.png");}
-.warpic-2{background-image: url("../img/warview-2.png");}
-.warpic-3{background-image: url("../img/warview-3.png");}
-.warpic-4{background-image: url("../img/warview-4.png");}
-.warpic-5{background-image: url("../img/warview-5.png");}
-.warpic-6{background-image: url("../img/warview-6.png");}
-.goodpic-1{background-image: url("../img/goodview-1.png");}
-.goodpic-2{background-image: url("../img/goodview-2.png");}
-.goodpic-3{background-image: url("../img/goodview-3.png");}
-.goodpic-4{background-image: url("../img/goodview-4.png");}
-.goodpic-5{background-image: url("../img/goodview-5.png");}
-.goodpic-6{background-image: url("../img/goodview-6.png");}
-
 .good-food, .war-view, .good-view{
   margin: 2rem auto;
   display: flex;
@@ -969,29 +893,32 @@ h1.table-detail{
   text-align: center;
   margin-bottom: 5%;
   border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.tour-card > img{
+  position: absolute;
+  z-index: -2;
+  top: 0;left: 0;
 }
 
-.tour-card  h1{
+.tour-card a{
   display: block;
   height: 100%;
-  padding: 45% 0;
+  padding: 44% 0;
   box-sizing: border-box;
   opacity: 0;
+  transition:1s;
+  color: var(--color-sub-dark);
 }
-.tour-card  h1:hover{
-  transition:1s ;
+.tour-card a:hover{
   opacity: 1;
   background-color: rgba(223, 184, 146,.6);
   border-radius: 1rem;
   outline: thick double var(--color-sub-dark);
   outline-offset: -1rem;
 }
-.tag-list .war-view, .tag-list .good-view{
-  display: none;
-}
-.tour-list .tag-2:hover ~ .tour-page .tab-2,.tour-list  .tag-3:hover ~ .tour-page .tab-3{
-  display: flex;
-}
+
 /* ==========================周邊景點-細節========================== */
 .tour-intro{
   display: flex;
@@ -1016,19 +943,62 @@ h1.table-detail{
   width: 100%;
   margin-bottom: 2rem;
 }
+.back{
+  display: block;
+  margin: 0 auto; 
+  
+}
+/* ==========================頁簽========================== */
 
+.tag-list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.tab-list{
+  width: 100%;
+}
+.tag-1,.tag-2,.tag-3{
+  width: 150px;
+  margin: 60px 0px 20px;
+  text-align: center;
+  color: var(--color-org-light);
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+}
+
+.tag-1::after,.tag-2::after,.tag-3::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-org);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.tag-1:hover::after,.tag-2:hover::after,.tag-3:hover::after{
+  transform: scaleX(1);
+}
 /* ==========================頁籤:hover========================== */
 
 .tag-1,.tag-2:hover,.tag-3:hover{
   color: var(--color-sub-dark);
-  border-bottom: 3px solid var(--color-sub-dark);
 }
 .tag-list:has(.tag-2:hover) .tag-1,.tag-list:has(.tag-3:hover) .tag-1{
-  border: 0;
   color: var(--color-org-light);
 }
 .tag-list > .tag-1:hover ~ .tab-list >.tab-2,.tag-list > .tag-1:hover ~ .tab-list >.tab-3,
 .tag-list > .tag-2:hover ~ .tab-list >.tab-1,.tag-list > .tag-2:hover ~ .tab-list >.tab-3,
 .tag-list > .tag-3:hover ~ .tab-list >.tab-1,.tag-list > .tag-3:hover ~ .tab-list >.tab-2{  
   display: none;
+}
+.tab-2, .tab-3{
+  display: none;
+}
+.tag-list .tag-2:hover ~ .tab-list .tab-2,.tag-list  .tag-3:hover ~ .tab-list .tab-3{
+  display: block;
 }
