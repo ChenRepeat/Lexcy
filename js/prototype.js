@@ -1,8 +1,8 @@
 // 導入頁首頁尾
-fetch('../header.html')
+fetch('header.html')
   .then(res => res.text())
   .then(data => document.querySelector('header').innerHTML = data)
 
-fetch('../footer.html')
+fetch('footer.html')
   .then(res => res.text())
   .then(data => document.querySelector('footer').innerHTML = data)
