@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>訂單確認</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./img/logo-icon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header></header>
+  <div class="banner-nopic">
+    <h1 class="">訂單確認</h1>
+  </div>
+  <main class="wrapper">
+    <section class="room-booking">
+      <img class="roompic-booking" src="./img/room-4.jpg" alt="房型圖片">
+      <ul class="booking-confirm">
+        <li><h4>房型</h4><div class="label"><h4>觀山廳</h4></div></li>
+        <li><h4>入住</h4><div class="label"><h4>2025-9-20</h4></div></li>
+        <li><h4>退房</h4><div class="label"><h4>2025-9-23</h4></div></li>
+        <li><h4>天數</h4><div class="label"><h4>3晚</h4></div></li>
+      </ul>
+      <ul class="booking-confirm">
+        <li><h4>單價</h4><div class="label"><h4>NTD.2000元整/晚</h4></div></li>
+        <li><h4>總價</h4><div class="label"><h4>NTD.6000元整</h4></div></li>
+        <li><h4>訂金</h4><div class="label highlight"><h4>NTD.1200元整</h4></div></li>
+        <li><h4>　</h4></li>
+      </ul>
+    </section>
+    <div class="cut-line"></div>
+    <section class="payment-method">
+      <ul class="payment-options">
+        <li><h3>選擇付款方式</h3></li>
+        <li><label><input type="radio" name="payment" value="credit" checked> 信用卡 (VISA / Master / JCB)</label></li>
+        <li><label><input type="radio" name="payment" value="linepay"> LINE Pay</label></li>
+        <li><label><input type="radio" name="payment" value="atm"> ATM 轉帳</label></li>
+      </ul>
+      <ul class="payment-info">
+        <li><h3>聯絡資訊確認</h3></li>
+        <li><h5>姓名</h5><input placeholder="雷斯西"></li>
+        <li><h5>E-Mail</h5><input type="email" placeholder="輸入E-mail"></li>
+        <li><h5>電話</h5><input placeholder="09XX-XXX-XXX"></li>
+      </ul>
+    </section>    
+    <div class="cut-line"></div>
+    <section class="policy-section">
+      <h3>付款與訂房條款</h3>
+      <p class="policy-text">
+        訂金將作為住宿費用的25%，於入住時折抵房費。<br><br>
+        若於入住前14日取消訂房，可全額退還訂金；其餘依公告之退訂規則辦理。<br><br>
+        本網站採用 SSL 安全連線保護交易資料，您的付款資訊將全程加密傳輸。<br><br>
+      </p>
+      <label class="policy-check"><input type="checkbox" required>我已閱讀並同意上述條款與隱私權政策</label>
+    </section>
+    
+  </main>
+  <ul class="btn-list">
+      <li><a href="room-booking-confirm.html"><button class="light btn-act-light">返回</button></a></li>
+      <li><a href="room-booking-result.html"><button class="btn-act">確認付款</button></a></li>
+    </ul>
+  <footer></footer>
+  <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
+  <script src="./js/prototype.js"></script>
+</body>
+</html>

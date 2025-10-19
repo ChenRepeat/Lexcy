@@ -9,14 +9,19 @@
   --color-sub-dark: #361B14;
   color: var(--color-sub-dark);
 }
+
 .lxgw-wenkai-mono-tc-regular {
-  font-family: "LXGW WenKai Mono TC", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.merienda-font {
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 body{
   background-color: var(--color-sub-light);
-  font-family: 'LXGW WenKai Mono TC', 'Noto Sans TC',monospace, sans-serif;
+  font-family: 'Merienda','LXGW WenKai Mono TC', 'Noto Sans TC',monospace, sans-serif;
   min-height: 100vh;
   position: relative;
 }
@@ -49,7 +54,7 @@ a{
 .font-sub-org{color: var(--color-sub-org);}
 .font-sub-light{color: var(--color-sub-light);}
 
-.wrapper {width: 1200px;margin: 0 auto;}
+.wrapper {width: 1200px;margin: 0 auto 60px;}
 
 i{display: block;font-size: 50px;line-height: 1.2;}
 
@@ -723,15 +728,18 @@ cursor: pointer;
   display: flex;
   gap: 5%;
   margin-bottom: 1.5rem;
+  justify-content: space-between;
   position: relative;
 }
 .info-detail > h4{
   width: 13%;
   text-align: right;
 }
-
+.guest-mail > p,.guest-pin > h5{
+  line-height: 2;
+}
 .guest-pin input{
-  width: 40%;  
+  width: 34%;  
 }
 
 p.warning{
@@ -742,7 +750,7 @@ p.warning{
 }
 
 input{
-  width: 72%;
+  width: 70%;
   background-color: var(--color-sub-light);
   padding-right: 10%;
   border-top: 0;
@@ -755,11 +763,44 @@ input{
 .price-inner{
   margin-top: 60px;
 }
-/* ==========================預定完成========================== */
-.headpic-result{
-  height: 300px;
-  justify-content: center;
+/* ==========================付款頁面========================== */
+.payment-method{
+  display: flex;
+  justify-content:space-between;
+  width: 60%;
+  margin: 0 auto;
 }
+.payment-method  li{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.payment-options h3{
+  display: block;
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+.payment-options,.payment-info{
+  width: 40%;
+}
+.payment-info input{
+  font-size: 1rem;
+}
+.policy-section h3{
+  margin-bottom: 1rem;
+}
+input[type="checkbox"],input[type="radio"]{
+  transform: scale(1.2);
+  accent-color: var(--color-org);
+  width: auto;
+  margin-right: 20px;
+}
+.policy-section{
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* ==========================預定完成========================== */
 
 .result-list{
   display: flex;
