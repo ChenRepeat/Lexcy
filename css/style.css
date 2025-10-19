@@ -71,12 +71,11 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   display: flex;
   width: 100%;
   top: 0;
-  z-index: 50;
-  background-size: cover;
+  z-index: 2;
   position: relative;
 }
 
-.toolbar ul{
+.navbar{
   display: flex;
   align-items: center;
   height: 100px;
@@ -85,7 +84,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   justify-content: end;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 6;
   padding-right: 1.5rem;
   box-sizing: border-box;
 }
@@ -101,11 +100,13 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   color: var(--color-org-light);
 }
 
-.toolbar i{
+.hamburger-btn{
   position: fixed;
   display: none;
   top: 20px;
   right: 20px;
+  cursor: pointer;
+  z-index: 11;
 }
 
 
@@ -1085,3 +1086,38 @@ input[type="checkbox"],input[type="radio"]{
 .tag-list .tag-2:hover ~ .tab-list .tab-2,.tag-list  .tag-3:hover ~ .tab-list .tab-3{
   display: block;
 }
+
+/* ==========================RWD========================== */
+
+
+@media screen and (max-width: 800px) {
+      .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-sub-light);
+        padding: 5rem 0 1.5rem;
+        z-index: 7; 
+      }
+      .navbar.active {
+        display: flex;
+      }
+      .sky-link {
+        width: auto;
+        text-align: center;
+        padding: 15px;
+      }
+      .hamburger-btn {
+        display: block;
+      }
+      .logo {
+        width: 150px; 
+      }
+    }
