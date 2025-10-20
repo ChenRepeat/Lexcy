@@ -1,0 +1,399 @@
+@import url('reset.css');
+
+/* ==============================規格============================== */
+.font-org-light{ color: var(--color-org-light);}
+.font-org{color: var(--color-org);}
+.font-dark{color: var(--color-sub-dark);}
+.font-sub-org{color: var(--color-sub-org);}
+.font-sub-light{color: var(--color-sub-light);}
+body{
+  background-color: var(--color-sub-light);
+  font-family: 'Merienda','LXGW WenKai Mono TC', 'Noto Sans TC',monospace, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+h1{font-size: 60px;line-height: 1.2;text-align: center;font-weight: bold;}
+
+h2{font-size: 32px;line-height: 1.2;font-weight: bold;}
+
+h3{font-size: 28px;line-height: 1.2;}
+
+h4{font-size: 24px;line-height: 1.6;}
+
+h5{font-size: 20px;line-height: 1.6;}
+
+span{font-size: 16px; line-height: 1.6;}
+
+p{font-size: 16px;line-height: 1.6;}
+
+a{
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-org-light);
+  font-weight: bold;
+}
+.wrapper {width: 1200px;margin: 0 auto 60px;}
+
+i{display: block;font-size: 50px;line-height: 1.2;}
+
+
+/* ==========================RWD========================== */
+
+@media screen and (max-width: 1200px){
+  .wrapper { width: 95%;}
+
+  .index-share{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .index-share .instagram-media{
+    max-width: 40% !important; 
+  }
+  /*======雷斯故事======*/
+  .build-intro-inner > img{
+    width: 36%;
+  }
+  .west-intro{
+    gap: 1.5rem;
+
+  }
+  .located-detail{
+    flex-direction: column-reverse;
+    align-content: center;
+    gap: 2rem;
+  }
+  .address-detail img{
+    transform: scale(0.6);
+  }
+  .googlemap-area
+  {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .googlemap-area > iframe{
+    width: 200%;
+  }
+/*======房型介紹======*/
+  .room-info{
+    gap: 1rem;
+  }
+  
+  .roompic-top{
+    display: block;
+    width: 465px;
+    height: 465px;
+    justify-self: center;
+    margin: 0 auto;
+  }
+  .roompic-list{
+    justify-content: space-evenly;
+    gap: 0;
+    margin-top: 10px;
+  }
+  .roompic-list > li{
+    width: 100px;
+    height: 100px;
+  }
+  li.price .price-org{
+    font-size: 18px;
+  }
+  li.price .price-new{
+    font-size: 24px;
+  }
+/*======房間預定======*/
+
+  .booking-detail{
+    width: 50%;
+  }
+  select.label{
+    width: 77%;
+  }
+  .booking-confirm{
+    width: 40%;
+  }
+  .roompic-booking{
+    display: none;
+  }
+  .info-detail > h4{
+    width: 15%;
+  }
+  .guest-mail > p{
+    font-size: 14px;
+  }
+  .guest-pin input {
+    width: 28%;
+  }
+
+}
+@media screen and (max-width: 992px) {
+  .wrapper{width: 90%;}
+  h1{font-size: 32px;}
+  h2{font-size: 24px;font-weight: normal;;}
+  h3{font-size: 20px;}
+  h4{font-size: 18px;}
+  h5{font-size: 16px;}
+  span{font-size: 14px;}
+
+/*======天、漢堡======*/
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-sub-light);
+    padding: 5rem 0 1.5rem;
+    z-index: 8; 
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .navbar.active li ~li{
+    width: 80%;
+    border-top: 1px solid var(--color-sub-dark);
+  }
+  
+  .sky-link {
+    width: 110px;
+    text-align: center;
+    padding: 15px;
+    justify-self: center;
+  }
+  .hamburger-btn {
+    display: block;
+    top: 20px;
+  }
+  .banner{
+    height: 50vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .banner-nopic{
+    height: 28vh;
+  }
+  .banner h1{
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .banner h2{
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+
+  .logo {
+    width: 150px; 
+  }
+/*======首頁======*/
+  .index{
+    gap: 1rem;
+  }
+  .index-share{
+    max-width: 700px;
+    width: 90%;
+    }
+  
+  .index-intro{
+    grid: repeat(6,1fr) / repeat(6,1fr);
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    box-sizing: border-box;
+    gap: 0.5rem;
+    align-items: center;
+  }
+ .index-share .instagram-media{
+    max-width: 30% !important; 
+  }
+/*======聲明頁======*/
+  .manners-tag{
+    font-size: 20px;
+  }
+/*======新聞頁======*/
+  .news-title{
+    width: 90%;
+  }
+  .news-flex{
+    gap: 1rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+/*======新聞頁細節======*/
+  .news-detail{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .news-detail-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    justify-content: center;
+  }
+  .news-detail-wrapper > img{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    margin-bottom: 20px;
+  }
+  .detail-inner{
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .detail-inner h5{
+    text-align: right;
+  }
+/*======周邊景點======*/
+  .tour-card{
+    width: 40%;
+  }
+  .tour-card img{
+    width: 100%;
+  }
+  .tour-intro{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .tour-words{
+    gap: 1rem;
+  }
+  .tour-googlemap-area > iframe{
+    width: 800px;
+  }
+  .type-pic > h2{
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+/*======房型介紹======*/
+  .room-info{
+    box-sizing: border-box;
+    padding: 0 2rem;
+    height: 432px;
+    gap: 1rem;
+  
+  }
+  .roompic{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .roompic > img{
+      height: 100%;
+      width: 100%;
+  }
+  .roompic-list{
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .roompic-list > li{
+    height: 69px;
+  }
+  .room-detail{
+    gap: 0.5rem;
+  }
+/*======房間預定======*/
+  .room-booking{
+    gap: 2rem;
+  }
+  .booking-detail > li{
+    gap: .25rem;
+    padding: 1rem 0;
+    
+  }
+  .label,.date-label{
+    border-bottom: 1px solid var(--color-sub-dark);
+    border-radius: 0.25rem;
+  }
+  .date-td{
+    box-sizing: border-box;
+    padding-top: 4px;
+  }
+  .date-td ~ i{
+    height: 2rem;
+  }
+  .date-label{
+    height: 2rem;
+    padding-top: 2px;
+  }
+/*======房間預定======*/
+  .confirm > .room-booking{
+    margin: 2rem 0;
+    height: 300px;
+  }
+  .roompic-booking{
+    display: none;
+  }
+  .info-detail{
+    width: 80%;
+    gap: 1rem;
+    height: 40px;
+  }
+  .info-detail > h4,.info-detail > h5,.info-detail > p{
+    width: 13%;
+    text-align: right;
+  }
+  .guest-pin input{
+    width: 40%;
+    
+  }
+  p.warning{
+    left: 13rem;
+    top: 10.5rem;
+  }
+  .confirm-cutline{
+    margin: 2rem 0;
+  }
+  .price-inner{
+    padding: 0 3rem;
+  }
+/*======付款頁面======*/
+  .payment-method{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .payment-options h3{
+    padding: 0;
+  }
+  .payment-options,.payment-info{
+    width: 100%;
+  }
+  .payment-cut{
+    width: 80%;
+    margin: 3rem auto;
+  }
+/*======預定完成======*/
+  .result-list{
+    gap: 15%;
+  }
+/*======訂單查詢======*/
+  .check-info{
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0;
+  }
+  .check-info > div{
+    width: 45%;
+    margin-top: 2rem;
+    height: 2rem;
+  }
+  .check-info > button{
+    margin-top: 1rem;
+  }
+  .date-info > input,.email-info > input{
+    font-size: 18px;
+  }
+
+}
