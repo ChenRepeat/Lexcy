@@ -43,14 +43,14 @@ i{display: block;font-size: 50px;line-height: 1.2;}
 
 @media screen and (max-width: 1200px){
   .wrapper { width: 95%;}
-
+  
   .index-share{
-    width: 90%;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .index-share .instagram-media{
-    max-width: 40% !important; 
+    max-width: 45% !important; 
   }
   /*======雷斯故事======*/
   .build-intro-inner > img{
@@ -74,34 +74,20 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     box-sizing: border-box;
   }
   .googlemap-area > iframe{
-    width: 200%;
-  }
-/*======房型介紹======*/
-  .room-info{
-    gap: 1rem;
-  }
-  
-  .roompic-top{
-    display: block;
-    width: 465px;
-    height: 465px;
-    justify-self: center;
+    width: 206%;
     margin: 0 auto;
   }
-  .roompic-list{
-    justify-content: space-evenly;
-    gap: 0;
-    margin-top: 10px;
+/*======房型介紹======*/
+ .room-info {
+    gap: 2rem;
   }
-  .roompic-list > li{
-    width: 100px;
-    height: 100px;
+
+  .roompic {
+    width: 48%;
   }
-  li.price .price-org{
-    font-size: 18px;
-  }
-  li.price .price-new{
-    font-size: 24px;
+
+  .room-detail {
+    width: 48%;
   }
 /*======房間預定======*/
 
@@ -124,10 +110,34 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     font-size: 14px;
   }
   .guest-pin input {
-    width: 28%;
+    width: 32%;
+  }
+  .price-inner{
+    width:60%;
+    margin: 60px auto 0;
+  }
+  .payment-info input{
+    width: 100%;
+    padding-left: 1rem;
   }
 
+/*======景點詳細======*/
+
+  .tour-googlemap-area iframe{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .news-detail-wrapper{
+    display: flex;
+    align-items: center;
+    
+  }
+  .detail-inner{
+    width: 40%;
+  }
 }
+
+/*====================== 斷點 992px ======================*/
 @media screen and (max-width: 992px) {
   .wrapper{width: 90%;}
   h1{font-size: 32px;}
@@ -275,32 +285,38 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     height: 12.5rem;
   }
 /*======房型介紹======*/
-  .room-info{
-    box-sizing: border-box;
-    padding: 0 2rem;
-    height: 432px;
-    gap: 1rem;
-  
+
+  .room-pic {
+    gap: 15px;
+    margin-bottom: 2rem;
   }
-  .roompic{
-    display: flex;
+
+  .type-pic > h2 {
+    height: 250px;
+    width: 250px;
+    line-height: 250px;
+    font-size: 28px;
+  }
+
+  .room-info {
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
   }
-  .roompic > img{
-      height: 100%;
-      width: 100%;
+
+  .roompic {
+    width: 80%;
+    max-width: 600px;
   }
-  .roompic-list{
-    gap: 0.5rem;
-    justify-content: center;
+  .room-detail {
+    width: 80%;
+    max-width: 600px;
   }
-  .roompic-list > li{
-    height: 69px;
+
+  .serve-list {
+    gap: 40px;
   }
-  .room-detail{
-    gap: 0.5rem;
-  }
+
 /*======房間預定======*/
   .room-booking{
     gap: 2rem;
@@ -396,4 +412,205 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     font-size: 18px;
   }
 
+}
+
+
+
+
+ 
+
+/* ==============================768px 斷點（平板直向）============================== */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .banner {
+    height: 40vh;
+    margin-bottom: 40px;
+  }
+
+  .banner h1 {
+    font-size: 48px;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
+
+  .room-pic {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .room-pic-list {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .type-pic > h2 {
+    height: 300px;
+    width: 100%;
+    line-height: 300px;
+    font-size: 32px;
+  }
+
+  .room-pic1,
+  .room-pic2,
+  .room-pic3 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .room-info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .roompic {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .roompic-list {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .roompic-list > li {
+    height: 100px;
+  }
+
+  .room-detail {
+    width: 100%;
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  .room-title h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .room-title span {
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .serve-list {
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .serve-list > ul {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .price {
+    justify-content: space-between;
+  }
+
+  .price-org {
+    font-size: 18px;
+  }
+
+  .price-new {
+    font-size: 28px;
+  }
+
+  button {
+    width: 140px;
+    height: 2.8rem;
+    font-size: 20px;
+  }
+}
+
+/* ==============================375px 斷點（手機）============================== */
+@media (max-width: 375px) {
+  .banner {
+    height: 30vh;
+    margin-bottom: 30px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .banner h2 {
+    font-size: 18px;
+    padding: 0 1rem;
+  }
+
+  .room-pic {
+    gap: 15px;
+  }
+
+  .type-pic > h2 {
+    height: 250px;
+    line-height: 250px;
+    font-size: 28px;
+  }
+
+  .room-pic1,
+  .room-pic2,
+  .room-pic3 {
+    height: 250px;
+  }
+
+   .roompic-list {
+    gap: 8px;
+    flex-wrap: wrap;
+    
+  }
+
+  .roompic-list > li {
+    width: calc(50% - 4px);
+    height: 80px;
+  }
+
+  .serve-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .serve-list > ul {
+    width: 100%;
+  }
+
+  .serve-list i {
+    font-size: 18px;
+  }
+
+  .serve-list span {
+    font-size: 14px;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .price-org {
+    font-size: 16px;
+  }
+
+  .price-new {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 18px;
+  }
+
+  .room-1,
+  .room-2,
+  .room-3 {
+    margin-bottom: 50px;
+  }
 }

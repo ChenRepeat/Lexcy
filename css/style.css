@@ -261,9 +261,10 @@ button.light{
   width: 100%;
   height: auto;
   position: absolute;
-  top: 50%;
+  min-height: 80vh;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -70%); */
   z-index: -1;
 }
 .banner-nopic{
@@ -455,12 +456,26 @@ button.light{
 
 
 /* ==========================新聞頁細節========================== */
-
+.banner-nopic.news-detail{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
 .detail-inner{
   display: flex;
   flex-direction: column;
   gap: 36px;
   padding: 0 48px;
+}
+.detail-inner h5{
+  text-align: right;
+  padding-right: 2rem;
+}
+.news-detail-wrapper{
+  display: flex;
+  padding-top: 60px;
+  align-items: center;
 }
 
 /* ==========================房型介紹========================== */
@@ -533,10 +548,13 @@ button.light{
 .roompic{
   width: 50%;
 }
-.roompic-top{
-  border-radius: 2.5rem;
+ .roompic-top {
   width: 100%;
-  height: 600px;
+  aspect-ratio: 4 / 3; 
+  height: auto; 
+  object-fit: cover;
+  object-position: center; 
+  border-radius: 2.5rem;
 }
 .roompic-list{
   display: flex;
@@ -767,6 +785,9 @@ input{
   border-radius: 8px;
   font-size: 24px;
 }
+.guest-pin{
+    height: 38.4px;
+  }
 .price-inner{
   margin-top: 60px;
 }
