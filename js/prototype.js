@@ -13,9 +13,8 @@ const navMenu = document.querySelector('.navbar');
       hamburger.classList.add('fa-bars');
     }
       });
-    } else {
-      console.error('Hamburger or menu not found');
     }
+    
 //頁籤
         $('#tag1').click(function() {
             $('.tag-list > div').removeClass('-active');
