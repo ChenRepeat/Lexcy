@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" crossorigin="anonymous"></script>
   <title>雷斯故事</title>
 </head>
 <body>
@@ -29,92 +30,92 @@
     <h2>你可以在小鎮裡，感受歲月靜好。<br>也在山海之間，尋找最純粹的自己。<br>更能在歲月斑駁的古廟裡，聽見光陰的故事。</h2>
   </div>
   <main class="wrapper">
-    <section class="tag-list">
-        <div class="tag-1">在地美食</div>
-        <div class="tag-2">戰地巡禮</div>
-        <div class="tag-3">網美秘境</div>
+    <section class="tag-list tour-tag">
+        <div class="tag-1 -active" id="tag1">在地美食</div>
+        <div class="tag-2" id="tag2">戰地巡禮</div>
+        <div class="tag-3" id="tag3">網美秘境</div>
         <section class="tab-list tour-page">
-            <div class="tab-1">
+            <div class="tab-1 -on" id="tab-1">
                 <section class="good-food">
                     <div class="tour-card foodpic-1">
                         <img src="./img/foodpic-1.png" alt="">
-                        <a href="tourism-detail.html"><h2>俊輝燒烤</h2></a>
+                        <a href="tourism-detail.html?id=1"><h2>俊輝燒烤</h2></a>
                     </div>
                     <div class="tour-card foodpic-2">
                         <img src="./img/foodpic-2.png" alt="">
-                        <a href="tourism-detail.html"><h2>丸樂汽水</h2></a>
+                        <a href="tourism-detail.html?id=2"><h2>丸樂汽水</h2></a>
                     </div>
                     <div class="tour-card foodpic-3">
                         <img src="./img/foodpic-3.png" alt="">
-                        <a href="tourism-detail.html"><h2>夢酒館</h2></a>
+                        <a href="tourism-detail.html?id=3"><h2>夢酒館</h2></a>
                     </div>
                     <div class="tour-card foodpic-4">
                         <img src="./img/foodpic-4.png" alt="">
-                        <a href="tourism-detail.html"><h2>東林北街黑糖剉冰</h2></a>
+                        <a href="tourism-detail.html?id=4"><h2>東林北街黑糖剉冰</h2></a>
                     </div>
                     <div class="tour-card foodpic-5">
                         <img src="./img/foodpic-5.png" alt="">
-                        <a href="tourism-detail.html"><h2>經武酒窖</h2></a>
+                        <a href="tourism-detail.html?id=5"><h2>經武酒窖</h2></a>
                     </div>
                     <div class="tour-card foodpic-6">
                         <img src="./img/foodpic-6.png" alt="">
-                        <a href="tourism-detail.html"><h2>浯倆</h2></a>
+                        <a href="tourism-detail.html?id=6"><h2>浯倆</h2></a>
                     </div>
                 </section>
             </div>
-            <div class="tab-2">
+            <div class="tab-2" id="tab-2">
                 <section class="war-view">
                     <div class="tour-card warpic-1">
                         <img src="./img/warview-1.png" alt="">
-                        <a href="tourism-detail.html"><h2>沙溪堡</h2></a>
+                        <a href="tourism-detail.html?id=7"><h2>沙溪堡</h2></a>
                     </div>
                     <div class="tour-card warpic-2">
                         <img src="./img/warview-2.png" alt="">
-                        <a href="tourism-detail.html"><h2>北山播音牆</h2></a>
+                        <a href="tourism-detail.html?id=8"><h2>北山播音牆</h2></a>
                     </div>
                     <div class="tour-card warpic-3">
                         <img src="./img/warview-3.png" alt="">
-                        <a href="tourism-detail.html"><h2>勇士堡</h2></a>
+                        <a href="tourism-detail.html?id=9"><h2>勇士堡</h2></a>
                     </div>
                     <div class="tour-card warpic-4">
                         <img src="./img/warview-4.png" alt="">
-                        <a href="tourism-detail.html"><h2>金東電影院</h2></a>
+                        <a href="tourism-detail.html?id=10"><h2>金東電影院</h2></a>
                     </div>
                     <div class="tour-card warpic-5">
                         <img src="./img/warview-5.png" alt="">
-                        <a href="tourism-detail.html"><h2>馬山觀測站</h2></a>
+                        <a href="tourism-detail.html?id=11"><h2>馬山觀測站</h2></a>
                     </div>
                     <div class="tour-card warpic-6">
                         <img src="./img/warview-6.png" alt="">
-                        <a href="tourism-detail.html"><h2>歐厝沙灘戰車</h2></a>
+                        <a href="tourism-detail.html?id=12"><h2>歐厝沙灘戰車</h2></a>
                     </div>
                 </section>
             </div>
-            <div class="tab-3">
+            <div class="tab-3" id="tab-3">
                 <section class="good-view">
                     <div class="tour-card goodpic-1">
                         <img src="./img/goodview-1.png" alt="">
-                        <a href="tourism-detail.html"><h2>雙口海灘</h2></a>
+                        <a href="tourism-detail.html?id=13"><h2>雙口海灘</h2></a>
                     </div>
                     <div class="tour-card goodpic-2">
                         <img src="./img/goodview-2.png" alt="">
-                        <a href="tourism-detail.html"><h2>高洞<br>（E092據點）</h2></a>
+                        <a href="tourism-detail.html?id=14"><h2>高洞<br>（E092據點）</h2></a>
                     </div>
                     <div class="tour-card goodpic-3">
                         <img src="./img/goodview-3.png" alt="">
-                        <a href="tourism-detail.html"><h2>山后民俗文化村</h2></a>
+                        <a href="tourism-detail.html?id=15"><h2>山后民俗文化村</h2></a>
                     </div>
                     <div class="tour-card goodpic-4">
                         <img src="./img/goodview-4.png" alt="">
-                        <a href="tourism-detail.html"><h2>燕南書院</h2></a>
+                        <a href="tourism-detail.html?id=16"><h2>燕南書院</h2></a>
                     </div>
                     <div class="tour-card goodpic-5">
                         <img src="./img/goodview-5.png" alt="">
-                        <a href="tourism-detail.html"><h2>料羅港</h2></a>
+                        <a href="tourism-detail.html?id=17"><h2>料羅港</h2></a>
                     </div>
                     <div class="tour-card goodpic-6">
                         <img src="./img/goodview-6.png" alt="">
-                        <a href="tourism-detail.html"><h2>古崗湖</h2></a>
+                        <a href="tourism-detail.html?id=18"><h2>古崗湖</h2></a>
                     </div>
                 </section>
             </div>

@@ -1,3 +1,4 @@
+$(document).ready(function() {
 //漢堡
 const hamburger = document.querySelector('.hamburger-btn');
 const navMenu = document.querySelector('.navbar');
@@ -15,3 +16,25 @@ const navMenu = document.querySelector('.navbar');
     } else {
       console.error('Hamburger or menu not found');
     }
+//頁籤
+        $('#tag1').click(function() {
+            $('.tag-list > div').removeClass('-active');
+            $(this).addClass('-active');
+            $('.tab-list > div').removeClass('-on');
+            $('.tab-1').addClass('-on');
+        });
+        $('#tag2').click(function() {
+            $('.tag-list > div').removeClass('-active');
+            $(this).addClass('-active');
+            $('.tab-list > div').removeClass('-on');
+            $('.tab-2').addClass('-on');
+        });
+  
+        $('#tag3').click(function() {
+            $('.tag-list > div').removeClass('-active');
+            $(this).addClass('-active');
+            $('.tab-list > div').removeClass('-on');
+            $('.tab-3').addClass('-on');
+        });
+    });
+

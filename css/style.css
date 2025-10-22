@@ -889,6 +889,9 @@ input[type="checkbox"],input[type="radio"]{
   border-bottom: 1px solid var(--color-sub-dark);
 }
 /* ==========================雷斯故事========================== */
+.story-tab > div{
+  display: none;
+}
 .name-intro{
   width: 100%;
   text-align: center;
@@ -963,6 +966,9 @@ input[type="checkbox"],input[type="radio"]{
 
 
 /* ==========================周邊景點========================== */
+.tour-page > div{
+  display: none;
+}
 .good-food, .war-view, .good-view{
   margin: 2rem auto;
   display: flex;
@@ -1071,22 +1077,25 @@ input[type="checkbox"],input[type="radio"]{
   transform: scaleX(1);
 }
 /* ==========================頁籤:hover========================== */
-
-.tag-1,.tag-2:hover,.tag-3:hover{
-  color: var(--color-sub-dark);
-}
-.tag-list:has(.tag-2:hover) .tag-1,.tag-list:has(.tag-3:hover) .tag-1{
-  color: var(--color-org-light);
-}
-.tag-list > .tag-1:hover ~ .tab-list >.tab-2,.tag-list > .tag-1:hover ~ .tab-list >.tab-3,
-.tag-list > .tag-2:hover ~ .tab-list >.tab-1,.tag-list > .tag-2:hover ~ .tab-list >.tab-3,
-.tag-list > .tag-3:hover ~ .tab-list >.tab-1,.tag-list > .tag-3:hover ~ .tab-list >.tab-2{  
-  display: none;
-}
-.tab-2, .tab-3{
-  display: none;
-}
-.tag-list .tag-2:hover ~ .tab-list .tab-2,.tag-list  .tag-3:hover ~ .tab-list .tab-3{
+.tab-list > div.-on{
   display: block;
 }
+
+
+.tag-list > div.-active {
+  color: var(--color-sub-dark);
+}
+.tag-list > div:hover {
+  color: var(--color-sub-dark);
+}
+
+.tag-list:has(.tag-2:hover) .tag-1,
+.tag-list:has(.tag-3:hover) .tag-1 {
+  color: var(--color-org-light);
+}
+
+.tag-list:has(div:hover) > div.-active:not(:hover) {
+  color: var(--color-org-light);
+}
+
 
