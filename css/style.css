@@ -55,7 +55,7 @@ a{
 .font-sub-org{color: var(--color-sub-org);}
 .font-sub-light{color: var(--color-sub-light);}
 
-.wrapper {width: 1200px;margin: 0 auto 60px;}
+.wrapper {width: 95%;max-width :1200px;margin: 0 auto 60px;}
 
 i{display: block;font-size: 50px;line-height: 1.2;}
 
