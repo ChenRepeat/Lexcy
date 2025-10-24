@@ -86,7 +86,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .index-share .instagram-media{
     max-width: 45% !important; 
   }
-  
+
 /*======雷斯故事======*/
   .build-intro-inner > img{
     width: 36%;
@@ -610,6 +610,12 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .tour-intro img{
     width: 90%;
     height: auto;
+  }
+  .rules-manner h4,.rules-privacy h5,.rules-price h5{
+    font-size: 20px;
+  }
+  .rules-privacy h5{
+    padding-left: 0;
   }
 }
 /* ==============================640px 斷點（平板直向）============================== */

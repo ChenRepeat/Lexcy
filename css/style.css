@@ -1087,6 +1087,9 @@ input[type="checkbox"],input[type="radio"]{
 .tag-1:hover::after,.tag-2:hover::after,.tag-3:hover::after{
   transform: scaleX(1);
 }
+.tab-1,.tab-2,.tab-3{
+  display: none;
+}
 /* ==========================頁籤:hover========================== */
 .tab-list > div.-on{
   display: block;
