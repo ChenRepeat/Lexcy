@@ -52,9 +52,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: start;
-    padding: 2rem 5rem 0;
+    padding: 2rem 5rem;
     column-gap: 0;
-    align-items: start;
+    align-items: end;
   }
   .footinfo li{
     height: 40px;
@@ -65,11 +65,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .linkicon{
     position: absolute;
     z-index: 200;
-    top: 0;
-    right: 8%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 200px;
+    top: 45%;
+    left: 8%;
+    height: auto;
     margin-top: 1rem;
   }
   .linkicon i{
@@ -240,7 +238,12 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .logo {
     width: 150px; 
   }
-
+  .linkicon{
+    flex-direction: column;
+    top: 18%;
+    height: 50%;
+    flex-wrap: wrap;
+  }
 
 /*======首頁======*/
   .index{
@@ -516,6 +519,33 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     height: 15vh;
     margin-bottom: 2rem;
   }
+  .linkicon{
+    top: 0;
+    left: 3%;
+    gap: 0.5rem;
+  }
+  .linkicon a{
+    height: 45px;
+  }
+  .linkicon i{
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .linkicon img{
+    transform: scale(0.9);
+  }
+  .footinfo{
+    gap: 0.5rem;
+    padding-right: 1rem;
+  }
+  .footinfo li h5,.footinfo li a{
+    font-size: 16px;
+  }
+  .copyRight{
+    position: absolute;
+    bottom: 0;left: 0;right: 0;
+    text-align: center;
+  }
   .room-pic {
     display: none;}
 
@@ -618,7 +648,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     padding-left: 0;
   }
 }
-/* ==============================640px 斷點（平板直向）============================== */
+/* ==============================640px 斷點============================== */
 @media (max-width: 640px) {
   .news-flex{
     flex-direction: column;
@@ -640,7 +670,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     font-size: 18px;
     padding: 0 1rem;
   }
-
+  .tag-1,.tag-2,.tag-3{
+    font-size: 16px;
+  }
   .room-pic {
     gap: 15px;
   }
@@ -790,5 +822,40 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   }
   .tour-googlemap-area iframe{
     height: 100%;
+  }
+  .tour-card{
+    width: 45%;
+    height: auto;
+    position: relative;
+  }
+  .tour-card h2{
+    font-size: 16px;
+  }
+  .tour-card::after{
+    content: '點擊了解';
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+    right: 4px;
+    background-color: var(--color-sub-light);
+    opacity: 0.6;
+  }
+  .manners-tag{
+    margin: 0.5rem;
+  }
+  .rules-manner h4{
+    font-size: 18px;
+  }
+  .rules-privacy h2{
+    font-size: 20px;
+  }
+  .rules-privacy h5{
+    font-size: 18px;
+  }
+  .tab-3 .rules-price h5{
+    font-size: 18px;
+  }
+  .tab-3 .rules-price{
+    width: 95%;
   }
 }
