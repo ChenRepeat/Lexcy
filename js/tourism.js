@@ -162,7 +162,7 @@ function innerDetail() {
         container.innerHTML = `
             <img src="${card.imgurl}" alt="">
             <ul class="tour-words">
-                <li><h5>${card.content}</h5></li>
+              <li><h5>${card.content}</h5></li>
             </ul>`;
         btn.innerHTML=
             `<li><a href="./tourism-detail.html?id=${card.before}" class=""><button class="btn-act-light light">上一則</button></a></li>
@@ -171,5 +171,6 @@ function innerDetail() {
         locate.innerHTML = `${card.located}`
     }
 }
+
 
 innerDetail();

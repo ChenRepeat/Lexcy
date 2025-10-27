@@ -622,17 +622,6 @@ button.light{
   opacity: 0.6;
   text-decoration: line-through;
 }
-
-.roompic:has(.roompic-list1:hover) .roompic-top{
-  content: url(../img/room-db-1.jpg);
-}
-.roompic:has(.roompic-list2:hover) .roompic-top{
-  content: url(../img/room-db-2.jpg);
-}
-.roompic:has(.roompic-list3:hover) .roompic-top{
-  content: url(../img/room-db-3.jpg);
-}
-
 /* ==========================訂房========================== */
 .room-booking{
   display: flex;
@@ -1093,18 +1082,6 @@ input[type="checkbox"],input[type="radio"]{
 
 .tag-list > div.-active {
   color: var(--color-sub-dark);
-}
-.tag-list > div:hover {
-  color: var(--color-sub-dark);
-}
-
-.tag-list:has(.tag-2:hover) .tag-1,
-.tag-list:has(.tag-3:hover) .tag-1 {
-  color: var(--color-org-light);
-}
-
-.tag-list:has(div:hover) > div.-active:not(:hover) {
-  color: var(--color-org-light);
 }
 
 
