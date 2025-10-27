@@ -1047,11 +1047,6 @@ input[type="checkbox"],input[type="radio"]{
   margin-bottom: 2rem;
   overflow: hidden;
 }
-.back{
-  display: block;
-  margin: 0 auto; 
-  
-}
 /* ==========================頁簽========================== */
 
 .tag-list{
