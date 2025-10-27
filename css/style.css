@@ -88,6 +88,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   z-index: 6;
   padding-right: 1.5rem;
   box-sizing: border-box;
+
 }
 .sky-link{
   display: block;
@@ -110,7 +111,19 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   z-index: 11;
 }
 
-
+.bar{
+  width: 36px;
+  height: 6px;
+  background-color: var(--color-org);
+  margin: 6px 0px;
+  border-radius: 3px;
+  }
+  .transition{
+    transition: 1s;
+  }
+  .menu.active .bar1{transform: rotate(-45deg) translate(-9px, 7px);}
+  .menu.active .bar2{opacity: 0;}
+  .menu.active .bar3{transform: rotate(45deg) translate(-9px, -8px);}
 /* ==============================地============================== */
 .landbar{
   position: static;
