@@ -1,13 +1,12 @@
 $(document).ready(function() {
 //漢堡
-const hamburger = document.querySelector('.hamburger-btn');
-const navMenu = document.querySelector('.navbar');
-    $(function () {
+  $(function () {
+      const navMenu = document.querySelector('.navbar');
       $('.menu').click(function(){
         $(this).toggleClass('active');
         navMenu.classList.toggle('active');
       })
-		})
+	})
     
 //頁籤
     $('#tag1').click(function() {
