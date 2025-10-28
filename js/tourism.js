@@ -164,13 +164,12 @@ function innerDetail() {
             <ul class="tour-words">
               <li><h5>${card.content}</h5></li>
             </ul>`;
-        btn.innerHTML=
-            `<li><a href="./tourism-detail.html?id=${card.before}" class=""><button class="btn-act-light light">上一則</button></a></li>
+        btn.innerHTML=`
+            <li><a href="./tourism-detail.html?id=${card.before}" class=""><button class="btn-act-light light">上一則</button></a></li>
             <li><a href="./tourism.html"><button class="btn-act-light light">回前頁</button></a></li>
             <li><a href="./tourism-detail.html?id=${card.next}" class=""><button class="btn-act">下一則</button></a></li>`     
         locate.innerHTML = `${card.located}`
     }
 }
-
 
 innerDetail();
