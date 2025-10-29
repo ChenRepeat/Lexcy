@@ -75,7 +75,7 @@ const cardsData = {
       title: '金東電影院',
       imgurl: './img/tour-detail-pic1.png',
       content: `金東電影院位於金門金沙鎮，建於戰地時期，是當年官兵與居民重要的娛樂場所。以簡樸卻堅固的建築風格見證當時的軍事文化生活。當年在緊張的駐防歲月裡，電影成為紓解壓力與聯繫情感的重要媒介。院名由于右任題字，原為軍中熱門戲院，現登錄歷史建築，修繕後成為觀光景點，曾為電影《軍中樂園》拍攝地，遊客可探索內部展覽與金門歷史風貌。`,
-      located: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1815.5979703615526!2d118.42610541137168!3d24.47866691742789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3414bb302d831ebf%3A0x6884ce306f43722a!2z6YeR5p2x6Zu75b2x6Zmi!5e0!3m2!1szh-TW!2stw!4v1761220171684!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+      located: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1815.5979703615526!2d118.42610541137168!3d24.47866691742789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3414bb302d831ebf%3A0x6884ce306f43722a!2z6YeR5p2x6Zu75b2x6Zmi!5e0!3m2!1szh-TW!2stw!4v1761220171684!5m2!1szh-TW!2stw" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
       before: `9`,
       next: `11`,
     },
