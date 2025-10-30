@@ -72,8 +72,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   display: flex;
   width: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   position: relative;
+  
 }
 
 .navbar{
@@ -88,6 +89,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   z-index: 6;
   padding-right: 1.5rem;
   box-sizing: border-box;
+  /* background-color: rgba(236, 214, 188,0.5); */
 
 }
 .sky-link{
@@ -124,6 +126,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .menu.active .bar1{transform: rotate(-45deg) translate(-9px, 7px);}
   .menu.active .bar2{opacity: 0;}
   .menu.active .bar3{transform: rotate(45deg) translate(-10px, -8px);}
+  .navbar.scrolled {background-color: rgba(236, 214, 188, 0.8);}
 /* ==============================地============================== */
 .landbar{
   position: static;
@@ -248,7 +251,7 @@ button.light{
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   margin-bottom: 60px;
   flex-direction: column;
   align-items: center;
@@ -273,14 +276,14 @@ button.light{
   display: block;
   position: absolute;
   aspect-ratio: 16 / 9; 
-  height: 100%;
-  min-height: 80vh;
+  width: 100%;
+  height: auto;
   z-index: -1;
-  /* object-fit: cover; */
+  object-fit: contain;
   bottom: 0;
 }
 .banner-nopic{
-  height: 25vh;
+  height: 35vh;
   border-bottom: 5px double var(--color-sub-dark);
   display: flex;
   justify-content: center;
@@ -291,6 +294,7 @@ button.light{
   margin: 0;
   padding-bottom: 60px;
 }
+
 /* ==============================首頁============================== */
 .index h1{
   color: var(--color-org);
@@ -300,11 +304,14 @@ button.light{
 }
 .index-midbanner{
   opacity: 0.6;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .index-intro {
       display: grid;
       width: 100%;
-      height: 50vh;
+      height: calc(100vh - 100px);
       max-height: 1200px;
       margin: 0 auto;
       box-sizing: border-box;
@@ -640,6 +647,7 @@ button.light{
   height: auto;
   overflow: hidden;
   border-radius: 1rem;
+  cursor: pointer;
 }
 .roompic-list > li > img{
   display: block;
@@ -827,7 +835,7 @@ cursor: pointer;
   color: red;
 }
 .guest-pin input{
-  width: 34%;  
+  width: 72%;  
 }
 
 p.warning{

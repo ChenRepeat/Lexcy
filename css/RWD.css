@@ -39,6 +39,14 @@ i{display: block;font-size: 50px;line-height: 1.2;}
 
 
 /* ==========================RWD========================== */
+/* ====================== 斷點1650頭圖專用 ======================== */
+@media screen and (max-width: 1650px){
+  .banner-pic{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
 /* ====================== 斷點1200 ======================== */
 
 @media screen and (max-width: 1200px){
@@ -226,12 +234,13 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     top: 20px;
   }
   .banner{
-    height: 50vh;
+    height: 100vh;
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
   .banner-nopic{
-    height: 24vh;
+    height: 30vh;
   }
   .banner h1{
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -268,11 +277,12 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     align-items: center;
 
   }
-  .index-intro > div{
-    height: auto;
-  }
+
   .index-share .instagram-media{
     max-width: 30% !important; 
+  }
+  .index-intro .p1 > img{
+    transform: translateX(-150px);
   }
 /*======聲明頁======*/
   .manners-tag{
@@ -354,7 +364,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     line-height: 250px;
     font-size: 28px;
   }
-  
+  .price{
+    justify-content: end;
+  }
 
   .room-info {
     flex-direction: column;
@@ -414,6 +426,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     width: 80%;
     gap: 1rem;
     height: 40px;
+    justify-content: end;
   }
   .info-detail > h4,.info-detail > h5,.info-detail > p{
     width: 15%;
@@ -421,8 +434,10 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     line-height: 40px;
   }
   .guest-pin input{
-    width: 33%;
-    
+    width: 70%;
+  }
+  #pin-text{
+    width: 80%;
   }
   p.warning{
     left: 13rem;
@@ -432,7 +447,11 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     margin: 2rem 0;
   }
   .price-inner{
-    padding: 0 3rem;
+    padding: 0;
+    width: 70%;
+  }
+  .btn-list{
+    margin-bottom: 1rem;
   }
 /*======付款頁面======*/
   .payment-method{
@@ -485,7 +504,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     gap: 0.5rem;
   }
   .result-info{
-    width: 45%;
+    width: 70%;
     height: auto;
     gap: 1em;
   }
@@ -511,13 +530,22 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     content: url(../img/logo-s.png);
     width: 80px;
     top: 22px;
-
   }
   .banner {
-    height: 40vh;
+    height: 100vh;
     margin-bottom: 40px;
+    
   }
-
+  .banner-pic{
+    width: 100%;
+    object-fit: cover;
+  }
+  .index-midbanner{
+    width: 100%;
+  }
+  .index-wrapper{
+    height: 100vh;
+  }
   .banner h1 {
     font-size: 48px;
   }
@@ -525,12 +553,18 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .banner h2 {
     font-size: 24px;
   }
+  .index-intro{
+    height: 60vh;
+  }
+  .index-intro .p1 > img{
+    transform: translateX(-100px);
+  }
   .tag-1,.tag-2,.tag-3{
     width: 25%;
     font-size: 20px;
   }
   .banner-nopic{
-    height: 15vh;
+    height: 20vh;
     margin-bottom: 2rem;
   }
   .linkicon{
@@ -661,6 +695,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .rules-privacy h5{
     padding-left: 0;
   }
+  .tour-words{
+    width: 100%;
+  }
 }
 /* ==============================640px 斷點============================== */
 @media (max-width: 640px) {
@@ -672,7 +709,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
 /* ============================== 斷點 576px  ============================== */
 @media (max-width: 576px) {
   .banner {
-    height: 30vh;
+    height: 100vh;
     margin-bottom: 30px;
   }
 
@@ -716,11 +753,16 @@ i{display: block;font-size: 50px;line-height: 1.2;}
 
 
   .serve-list {
-    justify-content: start;
+    justify-content: center;
     gap: 0;
-    width: 60%;
-  }
+    width: auto;
 
+  }
+  .serve-list > ul {
+    flex: 1;
+    width: 80px;
+    min-width: unset;
+  }
   .serve-list i {
     font-size: 18px;
   }
@@ -737,10 +779,15 @@ i{display: block;font-size: 50px;line-height: 1.2;}
 
   .price-org {
     font-size: 16px;
+    width: 45%;
+    text-align: right;
+    padding-right: 1rem;
+    box-sizing: border-box;
   }
 
   .price-new {
     font-size: 24px;
+    width: 45%;
   }
 
   button {
@@ -782,6 +829,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .guest-pin{
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 0.5rem ;
+    margin-top: 1rem;
   }
   .info-detail h4,.info-detail h5,.info-detail p{
     font-size: 20px;
@@ -789,18 +839,20 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     text-align: left;
   }
   .guest-info .info-detail input,.check-info > div input{
-    width: 100%;
+    width: 98%;
     padding: 0;
     font-size: 18px;
     padding-left: 0.5rem;
+    line-height: 1.6;
+    padding-top: 0.5rem;
   }
   .info-detail textarea{
     width: 100%;
   }
-  .guest-pin input{
-    width: 50%;
-    margin-bottom: 1rem;
+  #pin-input{
+    width: 76%;
   }
+  
   .price-inner {
     padding: 0;
     margin-top: 2.5rem;
@@ -810,8 +862,11 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     margin: 0 auto;
   }
   .guest-mail::after{
-    left: 49%;
+    left: unset;
     bottom: -27%;
+    right: 5%;
+    width: 70%;
+    text-align: right;
   }
   .booking-detail{
     width: 90%;
@@ -843,7 +898,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     position: relative;
   }
   .tour-card h2{
-    font-size: 16px;
+    font-size: 20px;
   }
   .tour-card::after{
     content: '點擊了解';
@@ -872,4 +927,5 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .tab-3 .rules-price{
     width: 95%;
   }
+  
 }

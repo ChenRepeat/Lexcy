@@ -44,6 +44,14 @@ $(document).ready(function() {
         }
     });
     
+// scroll 換天的背景色
+  $(window).scroll(function(){
+      if (window.scrollY > $(window).height() * 0.3){
+      $('.navbar').addClass('scrolled');
+    } else {
+      $('.navbar').removeClass('scrolled');
+    }
+  });
 
 });
 
