@@ -311,7 +311,7 @@ button.light{
 .index-intro {
       display: grid;
       width: 100%;
-      height: calc(100vh - 100px);
+      height: 80vh;
       max-height: 1200px;
       margin: 0 auto;
       box-sizing: border-box;
