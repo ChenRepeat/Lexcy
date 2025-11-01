@@ -53,6 +53,8 @@ $(document).ready(function() {
       $('.navbar').removeClass('scrolled');
     }}
   });
-
+  //查詢頁按鈕開關
+  $('.resultCheck').hide()
+  $('#resultCheck').click(function(){$('.resultCheck').show()})
 });
 

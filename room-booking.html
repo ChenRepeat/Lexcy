@@ -37,33 +37,53 @@
       <ul class="booking-detail">
           <li>
             <h4>房型</h4>
-            <select class="label">
-                  <option>望山居</option>
-                  <option>聞濤閣</option>
-                  <option>山海棠</option>
+            <select class="label" id="roomPrice">
+                  <option value="2000">望山居</option>
+                  <option value="3999">聞濤閣</option>
+                  <option value="9800">山海棠</option>
             </select>
             <i class="fa-regular fa-circle-down arrow"></i>
           </li>
           <li>
             <h4 class="">數量</h4>
-            <select class="label">
-                  <option><h5>1 間</h5></option>
-                  <option><h5>2 間</h5></option>
+            <select class="label" id="totalRooms">
+                  <option value="1"><h5>1 間</h5></option>
+                  <option value="2"><h5>2 間</h5></option>
             </select>
             <i class="fa-regular fa-circle-down arrow"></i>
           </li>
         <li>
           <h4 class="date-td">日期</h4>
-          <i class="fa-solid fa-calendar"></i>
-          <div class="date-label"><h5>2025-9-20</h5></div>
-          <div class="date-label"><h5>2025-9-20</h5></div>
-            
+          <i class="fa-solid fa-calendar" id="calendar-btn"></i>
+          <section class="calenderCase">
+            <div class="thisMonth">
+              <div id="rightArrow"></div>
+              <div class="month" id="monthYear"></div>
+              <div id="leftArrow"></div>
+              <div class="close-btn">Ｘ</div>
+            </div>
+            <table class="calendar" id="calendar">
+              <tr>
+                <td>日</td>
+                <td>月</td>
+                <td>火</td>
+                <td>水</td>
+                <td>木</td>
+                <td>金</td>
+                <td>土</td>
+              </tr>
+            </table>
+          </section>
+          
+          <div class="date-label"><h5 id="date1"></h5></div>
+          <div class="date-label"><h5 id="date2"></h5></div>
+          
         </li>
       </ul>
     </section>
     <ul class="btn-list">
       <li class=""><a href="room-info.html" class=""><button class="light btn-act-light">上一步</button></a></li>
-      <li class=""><a href="room-booking-confirm.html"><button  class="btn-act">送出</button></a></li>
+      <li class=""><a href="" id="resultLink"><button class="btn-act" id="resultBtn">送出</button></a></li>
   </ul>
   </main>
   <footer class="landbar">
@@ -86,5 +106,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
   <script src="./js/prototype.js"></script>
+  <script src="./js/calendar.js"></script>
 </body>
 </html>

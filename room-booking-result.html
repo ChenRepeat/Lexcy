@@ -33,19 +33,19 @@
   <main class="wrapper">
     <section class="result-list">
       <ul class="result-info">
-        <li><h4>房型</h4><h4>觀山廳</h4></li>
-        <li><h4>數量</h4><h4>1  間</h4></li>
-        <li><h4>單價</h4><h4>NTD.2000元/晚</h4></li>
-        <li><h4>入住日期</h4><h4>2025-9-20</h4></li>
-        <li><h4>退房日期</h4><h4>2025-9-23</h4></li>
-        <li><h4>付款方式</h4><h4>信用卡付款</h4></li>
+        <li><h4>房型</h4><h4 id="roomName"></h4></li>
+        <li><h4>數量</h4><h4 id="totalRooms"></h4></li>
+        <li><h4>單價</h4><h4 id="roomPrice"></h4></li>
+        <li><h4>入住日期</h4><h4 id="startDay"></h4></li>
+        <li><h4>退房日期</h4><h4 id="endDay"></h4></li>
+        <li><h4>付款方式</h4><h4 id="paymentOpt"></h4></li>
       </ul>
       <ul class="result-info">
-        <li><h4>姓名</h4><h4>雷斯西</h4></li>
-        <li><h4>手機</h4><h4>0947-647-647</h4></li>
-        <li><h4>信箱</h4><h4>lexcy@west.tw</h4></li>
-        <li><h4>總價</h4><h4>NTD.6000元</h4></li>
-        <li><h4>已付訂金</h4><h4>NTD.1200元</h4></li>
+        <li><h4>姓名</h4><h4 id="guestName"></h4></li>
+        <li><h4>手機</h4><h4 id="guestPhone"></h4></li>
+        <li><h4>信箱</h4><h4 id="guestEmail"></h4></li>
+        <li><h4>總價</h4><h4 id="totalPrice"></h4></li>
+        <li><h4>已付訂金</h4><h4 id="orderCost"></h4></li>
         <li><h4>備註</h4><h4></h4></li>
       </ul>
     </section>
@@ -75,5 +75,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c4f547345a.js" crossorigin="anonymous"></script>
   <script src="./js/prototype.js"></script>
+  <script src="./js/roomConfirn.js"></script>
 </body>
 </html>

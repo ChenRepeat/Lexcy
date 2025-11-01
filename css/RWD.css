@@ -154,15 +154,16 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .guest-mail > p{
     width: 15%;
   }
-  .guest-pin input {
-    width: 32%;
+  #pin-text input {
+    width: 58%;
   }
   .guest-pin h5 {
-    width: 15%;
+    width: 70%;
+    gap: 1rem;
   }
   .price-inner{
     width:60%;
-    margin: 60px auto 0;
+    margin: 30px auto;
   }
   .payment-info input{
     width: 100%;
@@ -434,6 +435,10 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     line-height: 40px;
   }
   .guest-pin input{
+    width: 70%;
+  }
+  .guest-pin h5{
+    display: block;
     width: 70%;
   }
   #pin-text{

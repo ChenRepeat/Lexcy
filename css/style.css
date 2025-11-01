@@ -702,7 +702,7 @@ button.light{
 /* ==========================訂房========================== */
 .room-booking{
   display: flex;
-  margin: 60px auto;
+  margin: 60px auto 0;
   justify-content: center;
   align-items: center;
   gap: 5%;
@@ -737,6 +737,7 @@ button.light{
   display: block;
   padding: 0.2rem;
   box-sizing: border-box;
+  
 }
 .label,.date-label, .info-detail > div{
   width: 72%;
@@ -751,6 +752,7 @@ button.light{
 .date-label{
   width: 36%;
   text-align: center;
+  cursor: pointer;
 }
 .label{
   background-color: var(--color-sub-light);
@@ -772,12 +774,107 @@ line-height: 40px;
 cursor: pointer;
 }
 .arrow{
-    position: absolute;
-    display: block;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    z-index: 3;
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.calenderCase{
+  z-index: 101;
+  position: absolute;
+  background-color: var(--color-sub-light);
+  top: 3.5rem;
+  border: 2px solid var(--color-sub-dark);
+  outline: 1px solid var(--color-sub-light);
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.calendar,.calendar tr,.calendar td{
+  text-align: center;
+  border: 1px solid var(--color-sub-dark);
+}
+.calendar{
+  width: 100%;
+  overflow: hidden;
+}
+.calendar td{
+  width: calc(100%/7);
+  font-size: 16px;
+  line-height: 1.6;
+  
+}
+.day.dayHover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2s;
+  color: var(--color-sub-light);
+  background-color: var(--color-org);
+}
+#rightArrow{
+  width: 0;
+  height: 0;
+  border: 16px solid;
+  border-color: var(--color-sub-light) var(--color-org) var(--color-sub-light) var(--color-sub-light);
+  cursor: pointer;
+}
+#rightArrow:hover{
+  border-color: var(--color-sub-light) var(--color-sub-dark) var(--color-sub-light) var(--color-sub-light);
+}
+#leftArrow{
+  width: 0;
+  height: 0;
+  border: 16px solid;
+  border-color: var(--color-sub-light) var(--color-sub-light) var(--color-sub-light) var(--color-org) ;
+  cursor: pointer;
+}
+#leftArrow:hover{
+  border-color: var(--color-sub-light) var(--color-sub-light) var(--color-sub-light) var(--color-sub-dark) ;
+}
+#monthYear{
+  margin: 0 1rem;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.thisMonth{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  position: relative;
+  gap: .25rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 0;
+  border: 1px solid var(--color-sub-dark);
+
+}
+.disabled{
+  background-color: var(--color-sub-org);
+  color: var(--color-sub-light);
+}
+.day.selected{
+  background-color: var(--color-sub-dark);
+  color: var(--color-org-light);
+}
+.thisMonth .close-btn{
+  position: absolute;
+  right: 4px;
+  top: 10px;
+  font-weight: bold;
+  border: 3px solid var(--color-sub-dark);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.thisMonth .close-btn:hover{
+  background-color: var(--color-sub-dark);
+  color: var(--color-org-light);
+}
+#calendar-btn:hover{
+  color: var(--color-org-light);
 }
 /* ==========================訂房確認========================== */
 .booking-confirm{
@@ -821,19 +918,45 @@ cursor: pointer;
   width: 13%;
   text-align: right;
 }
-.guest-mail > p,.guest-pin > h5{
+.guest-mail > p,.guest-pin h5{
   line-height: 2;
 }
-.guest-mail{
+.info-detail,#pin-input{
   position: relative;
 }
-.guest-mail::after{
+#pin-text,.payBtnList{
+  display: none;
+}
+.warningAct#pin-text{
+  display: flex;
+  justify-content: space-between;
+}
+#pin-text input{
+  width: 60%;
+  position: relative;
+}
+.warningAct.payBtnList{
+  display: block;
+}
+.guest-mail.warningAct::after{
   content: '已傳送驗證碼到信箱';
   position: absolute;
   left: 20%;
   bottom: -50%;
   color: red;
 }
+.noInfo::after{
+  position: absolute;
+  left: 20%;
+  bottom: -50%;
+  color: red;
+}
+.first-name.noInfo::after{content: '請確實填寫姓氏';}
+.last-name.noInfo::after{content: '請確實填寫名字';}
+.guest-mail.noInfo::after{content: '請確實填寫信箱';}
+.guest-phone.noInfo::after{content: '請確實填寫電話';}
+.guest-pin.noInfo::after{content: '請填寫驗證碼';left: 56%;}
+
 .guest-pin input{
   width: 72%;  
 }
@@ -860,7 +983,7 @@ input{
     height: 38.4px;
   }
 .price-inner{
-  margin-top: 60px;
+  margin: 30px auto;
 }
 textarea{
   background-color: var(--color-sub-light);
@@ -902,9 +1025,16 @@ input[type="checkbox"],input[type="radio"]{
 }
 .policy-section{
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  position: relative;
 }
-
+.policy-check.warningAct::after{
+  content: '請閱讀並同意條款';
+  position: absolute;
+  left: 0;
+  bottom: -6%;
+  color: red;
+}
 /* ==========================預定完成========================== */
 
 .result-list{
