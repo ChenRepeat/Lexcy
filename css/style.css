@@ -296,12 +296,6 @@ button.light{
 }
 
 /* ==============================首頁============================== */
-.index h1{
-  color: var(--color-org);
-}
-.index h2{
-  color: var(--color-sub-light);
-}
 .index-midbanner{
   opacity: 0.6;
   width: 100%;
@@ -350,7 +344,11 @@ button.light{
   text-shadow: 0 2px 1px rgba(0,0,0,0.3);
   transition: all 0.8s 0.3s;
 }
-    
+.index-intro .p1 > img,
+.index-intro .p2 > img,
+.index-intro .p3 > img{
+    transform: translateX(-40%);
+  }
 .intro-pic{
   display: block;
   object-fit: contain;
@@ -811,8 +809,8 @@ cursor: pointer;
   line-height: 1.6;
   
 }
+.day{cursor: pointer;}
 .day.dayHover{
-  cursor: pointer;
   transform: scale(1.2);
   transition: all 0.2s;
   color: var(--color-sub-light);
@@ -961,7 +959,7 @@ cursor: pointer;
 .guest-mail.noInfo::after{content: '請確實填寫信箱';}
 .guest-phone.noInfo::after{content: '請確實填寫電話';}
 .guest-pin.noInfo::after{content: '請填寫驗證碼';left: 56%;}
-
+#date1.noInfo::after{content: '請選擇日期';left: 24%;}
 .guest-pin input{
   width: 72%;  
 }
@@ -1223,6 +1221,7 @@ input[type="checkbox"],input[type="radio"]{
 /* ==========================周邊景點-細節========================== */
 .banner-nopic.tour-detail-banner{
   border: 0;
+  height: 25vh;
 }
 .tour-intro{
   display: flex;
@@ -1232,7 +1231,8 @@ input[type="checkbox"],input[type="radio"]{
   margin: 60px auto;
 }
 .tour-intro > img{
-  border-radius: 1rem;
+  border-radius: 1rem; 
+  width: 50%;
 }
 .tour-words{
   display: flex;

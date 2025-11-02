@@ -53,13 +53,12 @@ $(document).ready(function(){
             if(date > lastDay.getDate()) break;
         }
         function updateSelectedDisplay() {
-            
-          
           const dateBlock = $('#calendar td.day');
           dateBlock.removeClass('selected');
           // 更新顯示文字
-          $('#date1').text(selectedDates[0] || '尚未選擇');
-          $('#date2').text(selectedDates[1] || '尚未選擇');
+          $('#date1').text(selectedDates[0] || '請選擇日期');
+          $('#date2').text(selectedDates[1] || '請選擇日期');
+          $('#date1').removeClass('noInfo')
           if(selectedDates.length == 2) {
             const url = `room-booking-confirm.html?startDay=${selectedDates[0]}&endDay=${selectedDates[1]}&roomPrice=${roomPrice}&totalRooms=${totalRooms}`;
             $('#resultLink').attr('href', url);
@@ -129,7 +128,12 @@ $(document).ready(function(){
       updateSelectedDisplay();
     })
   }
-
+    $('#resultBtn').click(function(){
+       if(selectedDates.length < 2){
+        $('#date1').addClass('noInfo')
+       }
+    }
+    )
     $('#rightArrow').click(function() {
         currentDate.setMonth(currentDate.getMonth() - 1);
         generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
@@ -168,7 +172,7 @@ $(document).ready(function(){
     
     generateCalendar(currentDate.getFullYear(), currentDate.getMonth())
     $('.day').each(function(){
-      if ($(this).text()!== '') {
+      if ($(this).text()!== '' && !$(this).hasClass('disabled')) {
         $(this).hover(
           function() { $(this).addClass('dayHover') },
           function() { $(this).removeClass('dayHover') }
