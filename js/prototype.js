@@ -56,5 +56,10 @@ $(document).ready(function() {
   //查詢頁按鈕開關
   $('.resultCheck').hide()
   $('#resultCheck').click(function(){$('.resultCheck').show()})
+
+  //至頂按鈕
+  $('.toTop').click(function(){$('html,body').animate({scrollTop:0,},700.)}
+    
+  )
 });
 

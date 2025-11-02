@@ -126,7 +126,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .menu.active .bar1{transform: rotate(-45deg) translate(-9px, 7px);}
   .menu.active .bar2{opacity: 0;}
   .menu.active .bar3{transform: rotate(45deg) translate(-10px, -8px);}
-  .navbar.scrolled {background-color: rgba(236, 214, 188, 0.8);}
+  .navbar.scrolled {background-color: var(--color-sub-light);}
 /* ==============================地============================== */
 .landbar{
   position: static;
@@ -245,6 +245,17 @@ button.light{
 .btn-act-light:hover{
   box-shadow: inset 3px 3px 3px 1px var(--color-org) ;
 }
+.toTop{
+  position: sticky;
+  z-index: 105;
+  bottom: 1%;
+  cursor: pointer;
+  color: #361B14;
+  font-size: 50px;
+  width: 50px;
+  margin-left: auto;
+  text-shadow: 0px 0px 2px var(--color-sub-light);
+}
 /* ==============================頭圖============================== */
 .banner {
   display: flex;
@@ -279,7 +290,7 @@ button.light{
   width: 100%;
   height: auto;
   z-index: -1;
-  object-fit: contain;
+  object-fit: cover;
   bottom: 0;
 }
 .banner-nopic{

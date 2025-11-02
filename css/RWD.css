@@ -268,6 +268,7 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     flex-wrap: wrap;
   }
 
+
 /*======首頁======*/
   .index{
     gap: 1rem;
@@ -746,6 +747,15 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .tour-words{
     width: 100%;
   }
+  .tour-card::after{
+    content: '點擊了解';
+    position: absolute;
+    font-size: 14px;
+    bottom: 0px;
+    right: 4px;
+    background-color: var(--color-sub-light);
+    opacity: 0.6;
+  }
 }
 /* ==============================640px 斷點============================== */
 @media (max-width: 640px) {
@@ -970,16 +980,10 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     position: relative;
   }
   .tour-card h2{
-    font-size: 20px;
+    font-size: 18px;
   }
   .tour-card::after{
-    content: '點擊了解';
-    position: absolute;
-    font-size: 14px;
-    bottom: 0;
-    right: 4px;
-    background-color: var(--color-sub-light);
-    opacity: 0.6;
+    bottom: 5px;
   }
   .manners-tag{
     margin: 0.5rem;
