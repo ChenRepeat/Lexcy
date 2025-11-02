@@ -775,7 +775,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     height: 100vh;
     margin-bottom: 30px;
   }
-
+  .btn-list{
+    gap: 0.5rem;
+  }
   .banner h1 {
     font-size: 36px;
   }
