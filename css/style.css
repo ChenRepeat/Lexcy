@@ -250,11 +250,33 @@ button.light{
   z-index: 105;
   bottom: 1%;
   cursor: pointer;
-  color: #361B14;
-  font-size: 50px;
   width: 50px;
+  height: 50px;
   margin-left: auto;
-  text-shadow: 0px 0px 2px var(--color-sub-light);
+  margin-right: 1%;
+  filter: drop-shadow(2px 0 0 var(--color-sub-light)) drop-shadow(-2px 0 0 var(--color-sub-light)) drop-shadow(0 2px 0 var(--color-sub-light)) drop-shadow(0 -2px 0 var(--color-sub-light));
+  transition: all 0.3s;
+}
+.toTop:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.toTopBar1,.toTopBar2,.toTopBar3,.toTopBar4{
+  width: 30%;
+  border: 3px solid var(--color-sub-dark);
+  position: absolute;
+}
+.toTopBar1{
+  transform: rotate(-45deg) translate(-8px,16px);
+}
+.toTopBar2{
+  transform: rotate(-45deg) translate(-16px,24px);
+}
+.toTopBar3{
+  transform: rotate(45deg) translate(32px,8px);
+}
+.toTopBar4{
+  transform: rotate(45deg) translate(24px,0px);
 }
 /* ==============================頭圖============================== */
 .banner {

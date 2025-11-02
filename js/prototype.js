@@ -58,7 +58,10 @@ $(document).ready(function() {
   $('#resultCheck').click(function(){$('.resultCheck').show()})
 
   //至頂按鈕
-  $('.toTop').click(function(){$('html,body').animate({scrollTop:0,},700.)})
+  $('.toTop').click(function(e){
+    e.preventDefault();
+    $('html,body').stop(true, false).animate({scrollTop:0}, 700);
+  })
 
   //房間換圖
   $(function(){
