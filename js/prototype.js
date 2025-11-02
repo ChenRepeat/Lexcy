@@ -58,8 +58,14 @@ $(document).ready(function() {
   $('#resultCheck').click(function(){$('.resultCheck').show()})
 
   //至頂按鈕
-  $('.toTop').click(function(){$('html,body').animate({scrollTop:0,},700.)}
-    
-  )
+  $('.toTop').click(function(){$('html,body').animate({scrollTop:0,},700.)})
+
+  //房間換圖
+  $(function(){
+  $('.roompic-list img').click(function(){
+    let picSrc = $(this).attr('src');
+    $(this).closest('.roompic').find('.roompic-top').attr('src', picSrc);
+    });
+  });
 });
 
