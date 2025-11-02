@@ -596,7 +596,9 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .banner h2 {
     font-size: 24px;
   }
-  
+  .index-share{
+    width: 50%;
+  }
   .index-intro .p1 img,
   .index-intro .p2 img,
   .index-intro .p3 img,
