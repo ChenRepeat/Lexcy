@@ -597,7 +597,10 @@ i{display: block;font-size: 50px;line-height: 1.2;}
     font-size: 24px;
   }
   .index-share{
-    width: 50%;
+    width: 80%;
+  }
+  .index-share .instagram-media {
+    max-width: 100% !important;
   }
   .index-intro .p1 img,
   .index-intro .p2 img,
@@ -800,7 +803,10 @@ i{display: block;font-size: 50px;line-height: 1.2;}
   .room-pic3 {
     height: 250px;
   }
-
+  .index-share{
+    width: 90%;
+  }
+  
   .roompic-list {
     gap: 8px;
     flex-wrap: wrap;
