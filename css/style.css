@@ -508,7 +508,9 @@ button.light{
 }
 
 /* ==============================聲明頁============================== */
-
+.rules-title{
+  margin: auto;
+}
 .rules-manner,.rules-privacy,.rules-price{
   width: 80%;
   margin: 60px auto;
