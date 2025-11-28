@@ -575,6 +575,7 @@ button.light{
 .banner-nopic.news-detail{
   display:flex;
   flex-direction: column;
+  
   align-items: center;
   justify-content: end;
 }
