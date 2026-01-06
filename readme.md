@@ -5,7 +5,7 @@
 > **"Get away from the hustle and bustle."**
 > 一個結合金門烈嶼戰地文化與閩式老宅溫度的旅宿品牌官網。
 
-## 📖 專案介紹
+## 專案介紹
 
 **Lexcy (雷斯西)** 是一個以金門烈嶼（小金門）為背景的虛擬民宿品牌網站。
 有別於澎湖的熱鬧水上活動，金門擁有獨特的戰地風情與歷史建築聚落。本專案旨在透過網頁設計，推廣「老宅民宿」的慢活體驗，吸引嚮往遠離塵囂的旅客。
@@ -18,15 +18,15 @@
 
 本專案實作了完整的民宿預約流程與品牌形象展示：
 
-* **🏠 沉浸式首頁**：結合金門老宅視覺，傳遞「慢活」的品牌氛圍。
-* **🛏️ 房型瀏覽與預訂**：
+* **沉浸式首頁**：結合金門老宅視覺，傳遞「慢活」的品牌氛圍。
+* **房型瀏覽與預訂**：
     * 展示「梅之間」、「望山居」、「聽濤閣」等特色房型。
     * 實作日期選擇、房數計算與價格試算邏輯。
-* **🔍 訂單查詢系統**：使用者可透過 Email 與訂單編號查詢預訂狀態。
-* **🗺️ 周邊景點導覽**：整合 Google Map 概念，介紹金門在地美食（如俊輝燒烤）與文化景點（如燕南書院）。
-* **📱 全裝置響應式 (Fully RWD)**：針對四種斷點進行細緻佈局調整，確保從手機到桌機的流暢體驗。
+* **訂單查詢系統**：使用者可透過 Email 與訂單編號查詢預訂狀態。
+* **周邊景點導覽**：整合 Google Map 概念，介紹金門在地美食（如俊輝燒烤）與文化景點（如燕南書院）。
+* **全裝置響應式 (Fully RWD)**：針對四種斷點進行細緻佈局調整，確保從手機到桌機的流暢體驗。
 
-## 🎨 設計規範 (Design System)
+## 設計規範 (Design System)
 
 本專案嚴格遵循自行制定的 Design Guideline，以呈現溫潤沈穩的視覺風格：
 
@@ -38,7 +38,7 @@
     * English: **Merienda** (帶有手寫感的襯線體，呼應休閒氛圍)
     * Chinese: **LXGW WenKai Mono TC** (霞鶩文楷，展現人文氣息)
 
-## 🛠️ 技術架構 (Tech Stack)
+## 技術架構 (Tech Stack)
 
 * **Frontend Core**: HTML5, CSS3, JavaScript (ES6+)
 * **Layout Strategy**: Flexbox & Grid System
@@ -48,7 +48,7 @@
     * `768px`: Tablet Portrait / Mobile Landscape
     * `576px`: Mobile Portrait
 
-## 🚀 未來規劃 (Roadmap)
+## 未來規劃 (Roadmap)
 
 目前專案正進行 **Vue.js 3.0** 重構計畫，預計導入以下技術：
 - [ ] **Componentization**: 將 Header, Footer, RoomCard, NewsCard,按鈕 等拆分為獨立組件。
@@ -65,7 +65,7 @@
 |:---:|:---:|
 | <img src="./assest/tourismDesk.png" width="300" alt="景點介紹" /> | <img src="./assest/tourismRWD.png" width="300" alt="景點介紹 Mobile" /> |
 
-## 👨‍💻 作者與聲明 (Credits)
+## 作者與聲明 (Credits)
 
 * **Developer**: 陳從富 (Repeat C.H.)
 * **Assets Source**:
