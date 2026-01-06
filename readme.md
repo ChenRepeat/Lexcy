@@ -59,7 +59,7 @@
 
 | 首頁 (Home) | 房型預訂 (Booking) |
 |:---:|:---:|
-| <img src="./assets/index.png" width="300" alt="Lexcy 首頁" /> | <img src="./assest/roomBooking.png" width="300" alt="訂房頁面" /> |
+| <img src="./assest/index.png" width="300" alt="Lexcy 首頁" /> | <img src="./assest/roomBooking.png" width="300" alt="訂房頁面" /> |
 
 | 景點介紹 (Attractions) | 手機版呈現 (Mobile) |
 |:---:|:---:|
