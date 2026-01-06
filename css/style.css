@@ -378,11 +378,7 @@ button.light{
   text-shadow: 0 2px 1px rgba(0,0,0,0.3);
   transition: all 0.8s 0.3s;
 }
-.index-intro .p1 > img,
-.index-intro .p2 > img,
-.index-intro .p3 > img{
-    transform: translateX(-40%);
-  }
+
 .intro-pic{
   display: block;
   object-fit: contain;
